@@ -1,14 +1,13 @@
 :root {
 	/* ====== FIGMA start ====== */
 
-	/* ==== opacity ==== */
+	/* #### opacity #### */
 	/* == menu == */
 	--opacity-text-menu: 0.5;
 	/* == testimonials btn== */
 	--opacity-btn-circ: 0.3;
 
-	/* ==== color ==== */
-
+	/* #### color #### */
 	/* == page == */
 	--c-main: #458ff6;
 
@@ -19,7 +18,6 @@
 	--c-text-logo: #233348;
 	--c-text-logo-light: #5b9bf3;
 	--c-text-menu: #1f1534;
-
 	
 	/* == text == */
 	--c-text-dark: #000000;
@@ -34,24 +32,19 @@
 	--c-btn-arr: #458ff6;
 	--c-btn-circ: #5b9bf3;
 
-	/* ==== font-size ==== */
-
+	/* #### font-size #### */
 	/*16px*/
 	--f-size-main: 1rem;
 	/*18px*/
 	--f-size-secondary: 1.125rem;
-
 	/*17px*/
 	--f-size-link: 1.0625rem;
-
 	/*19px*/
 	--f-size-quote: 1.1875rem;
 	/*22px*/
 	--f-size-names: 1.375rem;
-
 	/*26px*/
 	--f-size-t: 1.625rem;
-
 	/*20px*/
 	--f-size-footer-h: 1.25rem;
 	/*21px*/
@@ -63,7 +56,7 @@
 	/*48px*/
 	--f-size-h1: 3rem;
 
-	/* ==== font-weight ==== */
+	/* #### font-weight #### */
 	--f-weight-light: 300;
 	--f-weight-normal: 400;
 	--f-weight-bold: 700;
