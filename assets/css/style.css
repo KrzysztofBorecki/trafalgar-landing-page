@@ -1,11 +1,11 @@
 :root {
   /* ====== FIGMA start ====== */
-  /* ==== opacity ==== */
+  /* #### opacity #### */
   /* == menu == */
   --opacity-text-menu: 0.5;
   /* == testimonials btn== */
   --opacity-btn-circ: 0.3;
-  /* ==== color ==== */
+  /* #### color #### */
   /* == page == */
   --c-main: #458ff6;
   /* == read more btn == */
@@ -24,7 +24,7 @@
   /* == testimonials btn == */
   --c-btn-arr: #458ff6;
   --c-btn-circ: #5b9bf3;
-  /* ==== font-size ==== */
+  /* #### font-size #### */
   /*16px*/
   --f-size-main: 1rem;
   /*18px*/
@@ -47,7 +47,7 @@
   --f-size-h2: 2.25rem;
   /*48px*/
   --f-size-h1: 3rem;
-  /* ==== font-weight ==== */
+  /* #### font-weight #### */
   --f-weight-light: 300;
   --f-weight-normal: 400;
   --f-weight-bold: 700;
