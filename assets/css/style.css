@@ -52,4 +52,47 @@
   --f-weight-normal: 400;
   --f-weight-bold: 700;
   /* ====== Figma end ====== */
+}
+
+/* ====== general settings ====== */
+.trafalgar {
+  color: var(--c-text-dark);
+  font-size: var(--f-size-main);
+  font-family: "Mulish", sans-serif;
+}
+
+.page {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* ====== trafalgar logo V.2.0 ====== */
+.logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-weight: var(--f-weight-bold);
+}
+.logo__icon {
+  font-size: var(--f-size-t);
+  color: var(--c-text-white);
+  background-color: var(--c-main);
+  width: 1.577em;
+  line-height: 1.577em;
+  border-radius: 1.577em;
+  text-align: center;
+  text-indent: -1px;
+  margin: 0;
+}
+.logo__icon--light {
+  color: var(--c-text-logo-light);
+  background-color: var(--c-text-white);
+}
+.logo__text {
+  font-size: var(--f-size-h3);
+  margin: 0 0 0 0.5em;
+  color: var(--c-text-logo);
+}
+.logo__text--light {
+  color: var(--c-text-white);
 }/*# sourceMappingURL=style.css.map */
