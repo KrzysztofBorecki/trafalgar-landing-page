@@ -1,12 +1,21 @@
-/* ====== general settings ====== */
+// #### general settings
 
 .trafalgar {
 	color: var(--c-text-dark);
 	font-size: var(--f-size-main);
 	font-family: 'Mulish', sans-serif;
+    box-sizing: border-box;
 }
 
 .page {
 	min-height: 100vh;
 	width: 100%;
+    // padding: 20px;
+    // text-align: center;
 }
+
+// @media screen and (orientation: landscape) {
+//     .page {
+//         padding: initial;
+//     }
+// }
