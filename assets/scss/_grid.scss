@@ -6,6 +6,12 @@
 	grid-template-rows: repeat(3, minmax(100px, auto));
 }
 
+@media (hover) {
+    .page-grid {
+        grid-template-columns: repeat(8, minmax(130px, 1fr));
+    }
+}
+
 // ## page grid items
 .page-grid {
     &__header {
