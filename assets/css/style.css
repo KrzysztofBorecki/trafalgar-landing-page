@@ -68,15 +68,12 @@
   grid-column: 2/8;
 }
 
-/* #### general nav */
 .nav-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-/* #### mobile nav */
-/* ## mobile nav general styles */
 .mobile-top-bar {
   display: flex;
   justify-content: space-between;
@@ -90,7 +87,6 @@
     height: unset;
   }
 }
-/* ## mobile nav button */
 .mobile-nav-button {
   display: block;
   width: 41px;
@@ -135,7 +131,6 @@
     display: none;
   }
 }
-/* #### primary nav */
 .nav-bar {
   display: block;
 }
@@ -202,7 +197,6 @@
   margin-top: -1px;
 }
 
-/* #### trafalgar logo V.2.0 */
 .logo {
   text-decoration: none;
   display: flex;
