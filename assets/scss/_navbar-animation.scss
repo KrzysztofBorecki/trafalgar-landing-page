@@ -1,11 +1,13 @@
 .scroll-locked {
     overflow: hidden;
 }
+
 @media (hover) {
     .scroll-locked {
         overflow: unset;
     } 
 }
+
 
 .primary-nav {
     transition: all 200ms;
@@ -25,4 +27,25 @@
 .primary-nav.active .nav-bar__link {
     opacity: 1;
     transform: translateY(0%);
+}
+
+@media (hover) {
+    .primary-nav {
+        transition: unset;
+        transform: unset;
+    
+        &.active {
+            transform: unset;
+        }
+    }
+
+    .primary-nav .nav-bar__link {
+        transition: 200ms cubic-bezier(.3,.27,.11,.97);
+        opacity: unset;
+        transform: unset;
+    }
+    .primary-nav.active .nav-bar__link {
+        opacity: unset;
+        transform: unset;
+    }
 }
