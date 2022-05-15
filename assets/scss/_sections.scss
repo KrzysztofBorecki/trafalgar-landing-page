@@ -1,3 +1,38 @@
-.section-hero {
-    height: 100vh
+// #### sections
+.section-containter {
+	display: flex;
+	justify-content: space-between;
+}
+
+.section-hero-container {
+    height: 100vh;
+    padding-top: 100px;
+}
+
+
+
+
+
+.section--center {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+  }
+
+
+
+.section-padding{
+	padding: 3rem 6.5rem;
+}
+
+.section-padding--hero{
+	padding: 3rem 0;
+}
+
+
+.article--hero {
+	max-width: 65ch;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
