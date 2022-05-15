@@ -1,0 +1,87 @@
+/*
+#
+#   applied on desktop
+#
+*/
+@media (hover){
+    /*
+    // #### page grid
+    .page-grid {
+        display: grid;
+        // grid-template-columns: repeat(8, 1fr);
+        grid-template-columns: repeat(8, minmax(130px, 1fr));
+        // grid-template-rows: repeat(3, minmax(100px, auto));
+    }
+
+    // ## page grid items
+    .page-grid {
+        &__header {
+            grid-column: 1/9;
+            grid-row: 1/2;
+        }
+    
+        &__main {
+            grid-column: 1/9;
+            grid-row: 2/3;
+        }
+    
+        &__footer {
+            grid-column: 1/9;
+            grid-row: 3/4;
+        }
+    }
+    */
+    // #### header grid
+    .header-grid {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    // ## header grid item
+    .header-grid {
+        &__nav-bar {
+            grid-column: 2/8;
+        }
+    }
+
+    // #### main grid
+    .main-grid {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(6, minmax(100px, auto));
+    }
+
+    // ## main grid items
+    .main-grid__section {
+        grid-column: 1/9;
+    }
+
+    // #### sections grid
+    .section-grid {
+        display:grid;
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    // ## section grid items
+    .section-grid__container {
+	    grid-column: 2/8;
+    } 
+
+    // #### footer grid
+    .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    // ## footer grid items
+    .footer-grid {
+        &__info {
+            grid-column: 2/4;
+        }
+    
+        &__nav {
+            grid-column: 4/8;
+        }
+    }    
+}
+
