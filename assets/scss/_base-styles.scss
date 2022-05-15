@@ -12,18 +12,8 @@
 	width: 100%;
 	background-color: var(--c-bg-main);
 	position: relative;
-    // padding: 20px;
-    // text-align: center;
 }
 
-// @media (hover) {
-// 	.page {
-// 		min-width: 1060px;
-// 	}
-// }
-
-// @media screen and (orientation: landscape) {
-//     .page {
-//         padding: initial;
-//     }
-// }
+.section-mobile {
+	padding: 0 20px;
+}
