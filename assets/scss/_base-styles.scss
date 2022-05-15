@@ -17,3 +17,9 @@
 .section-mobile {
 	padding: 0 20px;
 }
+
+@media (hover) {
+	.section-mobile {
+		padding: 0;
+	}
+}
