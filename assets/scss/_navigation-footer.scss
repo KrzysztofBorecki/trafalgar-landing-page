@@ -1,0 +1,21 @@
+// #### footer navigation
+.footer-nav {
+	display: flex;
+	justify-content: space-around;
+	padding: 0;
+}
+
+.footer-nav__link {
+	display: inline-block;
+	text-decoration: none;
+	min-width: 7.8em;
+	font-size: var(--f-size-secondary);
+	color: var(--c-text-white);
+	line-height: 2.111em;
+	// padding: 0.625rem 0;
+	transition: all 200ms cubic-bezier(.3,.27,.11,.97);
+
+		&:hover {
+		font-weight: var(--f-weight-bold);
+		}
+}
