@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body class="page page-grid">
-    <header class="page-grid__header header-grid">
+    <header class="page-grid__header header-grid header-nav-bar">
         <div class="header-grid__nav-bar nav-bar">
             <div class="mobile-top-bar">
             <!-- V 2.0 -->
@@ -24,13 +24,13 @@
                     <span class="logo__text" aria-hidden="true">Trafalgar</span>
                 </a>
 
-                <button id="mobile-nav-button" class="mobile-nav-button" aria-controls="primary-navigation" aria-expanded="false">
-                    <div></div>
+                <button id="mobile-nav-button" class="mobile-nav-button active" aria-controls="primary-nav" aria-expanded="true">
+                    <span></span>
                 </button> 
             </div> 
 
-            <nav>
-                <ul class="nav-bar__menu nav-list">
+            <nav id="primary-nav" class="primary-nav active">
+                <ul id="primary-nav-menu" class="nav-bar__menu nav-list active">
                     <li class="nav-bar__item">
                         <a class="nav-bar__link nav-bar__link--active" href="/" data-title="Home">Home</a>
                     </li>
@@ -52,8 +52,8 @@
         </div>
     </header>
 
-    <main class="page-grid__main">
-        <section>
+    <main class="page-grid__main main-grid">
+        <section class="main-grid__section	section-grid">
 
             <img src="./assets/images/png/decor-dots.png" alt="decor dots" aria-hidden="true">	
 
@@ -72,7 +72,7 @@
             </div>
         </section>
 
-        <section>
+        <section class="main-grid__section	section-grid">
             <img src="./assets/images/png/decor-background-01.png" alt="decor background" aria-hidden="true">
         <div>
             <img src="./assets/images/png/decor-dots.png" alt="decor dots" aria-hidden="true">
@@ -169,8 +169,8 @@
         </div>
         </section>
 
-        <section>
-            <div>
+        <section class="main-grid__section section-grid">
+            <div class="section-grid__container">
             <div>
                 <img src="./assets/images/png/illustration-02.png" alt="Healthcare image 1" aria-hidden="true" />
                 <article>
@@ -188,8 +188,8 @@
             </div>
         </section>
 
-        <section>
-            <div>
+        <section class="main-grid__section section-grid">
+            <div class="section-grid__container">
             <div>
                 <article>
                     <h2>
@@ -208,8 +208,8 @@
             </div>
         </section>
 
-        <section> 
-            <div>
+        <section class="main-grid__section section-grid"> 
+            <div class="section-grid__container">
             <h2>
                 What our customer are saying
             </h2>
@@ -233,8 +233,8 @@
             </div>
         </section>
 
-        <section>
-            <div>
+        <section class="main-grid__section section-grid">
+            <div class="section-grid__container">
             <h2>
                 Check our our latest article
             </h2>
@@ -290,10 +290,10 @@
 
     </main>
 
-    <footer class="page-grid__footer">
+    <footer class="page-grid__footer footer-grid">
         <img src="./assets/images/Vector.svg" alt="">
         <img src="./assets/images/png/decor-dots.png" alt="decor dots" aria-hidden="true">
-        <div >
+        <div class="footer-grid__info">
             <!-- V 2.0 -->
             <a class="logo" href="/" aria-label="Trafalgar logo">
                 <span class="logo__icon logo__icon--light" aria-hidden="true">T</span>
@@ -308,7 +308,7 @@
             </div>
         </div>
 
-        <nav>
+        <nav class="footer-grid__nav">
             <ul>
                 <li>
                     <ul>
