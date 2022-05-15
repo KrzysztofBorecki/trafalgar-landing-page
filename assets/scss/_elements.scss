@@ -36,3 +36,51 @@
 		}
 	}
 }
+
+// #### decor
+.decor{
+	position: relative;
+	overflow: hidden;
+}
+
+.decor-dots {
+	&--hero {
+		position: absolute;
+		left: 0;
+		top: 0;
+		transform: translate(-40%, 0);
+	}
+
+	&--services {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translate(-40%, 0);
+	}
+
+	&--articles {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		transform: translate(-66%, 35%);
+	}
+
+	&--footer {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		transform: translate(-15%, 15%);
+	}
+}
+
+.decor-bg-left{
+	z-index: -999;
+	position: absolute;
+	left: 0;
+}
+
+.decor-bg-right{
+	z-index: -999;
+	position: absolute;
+	right: 0;
+}
