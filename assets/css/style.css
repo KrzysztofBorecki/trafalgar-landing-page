@@ -28,6 +28,10 @@
   --f-weight-light: 300;
   --f-weight-normal: 400;
   --f-weight-bold: 700;
+  --nav-height-desktop: 100px;
+  /* so far no use
+  --nav-height-mobile: 80px;
+  */
 }
 
 .trafalgar {
@@ -41,9 +45,14 @@
   min-height: 100vh;
   width: 100%;
   background-color: var(--c-bg-main);
-  position: relative;
+  text-align: center;
 }
 
+@media (hover) {
+  .page {
+    text-align: initial;
+  }
+}
 .section-mobile {
   padding: 0 20px;
 }
@@ -53,31 +62,70 @@
     padding: 0;
   }
 }
+.section-containter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-hero-container {
+  height: 100vh;
+  padding-top: 100px;
+}
+
+.section--center {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.section-padding {
+  padding: 3rem 6.5rem;
+}
+
+.section-padding--hero {
+  padding: 3rem 0;
+}
+
+.article--hero {
+  max-width: 65ch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 /*
 #
 #   applied on desktop
 #
 */
 @media (hover) {
+  /*
+  // #### page grid
   .page-grid {
-    display: grid;
-    grid-template-columns: repeat(8, minmax(130px, 1fr));
-    grid-template-rows: repeat(3, minmax(100px, auto));
+      display: grid;
+      // grid-template-columns: repeat(8, 1fr);
+      grid-template-columns: repeat(8, minmax(130px, 1fr));
+      // grid-template-rows: repeat(3, minmax(100px, auto));
   }
 
-  .page-grid__header {
-    grid-column: 1/9;
-    grid-row: 1/2;
-  }
-  .page-grid__main {
-    grid-column: 1/9;
-    grid-row: 2/3;
-  }
-  .page-grid__footer {
-    grid-column: 1/9;
-    grid-row: 3/4;
-  }
+  // ## page grid items
+  .page-grid {
+      &__header {
+          grid-column: 1/9;
+          grid-row: 1/2;
+      }
 
+      &__main {
+          grid-column: 1/9;
+          grid-row: 2/3;
+      }
+
+      &__footer {
+          grid-column: 1/9;
+          grid-row: 3/4;
+      }
+  }
+  */
   .header-grid {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
@@ -128,8 +176,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100px;
-  z-index: 1;
+  height: var(--nav-height-desktop);
+  position: relative;
   background-color: var(--c-bg-main);
 }
 
@@ -137,6 +185,7 @@
   .mobile-top-bar {
     display: block;
     height: unset;
+    background-color: unset;
   }
 }
 .mobile-nav-button {
@@ -187,21 +236,15 @@
 .header-nav-bar {
   background-color: var(--c-bg-menu);
   position: fixed;
+  z-index: 999;
   top: 0;
-  width: 100%;
-  height: 100%;
+  left: 0;
+  right: 0;
 }
 
-@media (hover) {
-  .header-nav-bar {
-    background-color: var(--c-bg-menu);
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-  }
-}
 .nav-bar {
   display: block;
+  height: var(--nav-height-desktop);
 }
 
 @media (hover) {
@@ -212,9 +255,15 @@
   }
 }
 .primary-nav {
+  height: 100vh;
   background: var(--c-bg-menu);
 }
 
+@media (hover) {
+  .primary-nav {
+    height: unset;
+  }
+}
 .nav-bar__menu {
   display: block;
 }
@@ -227,6 +276,7 @@
 }
 .nav-bar__item {
   display: block;
+  overflow: hidden;
 }
 .nav-bar__item::after {
   display: block;
@@ -245,10 +295,11 @@
     display: none;
   }
 }
-.nav-bar__link {
-  transition: 200ms cubic-bezier(0.3, 0.27, 0.11, 0.97);
+@media (hover) {
+  .nav-bar__link {
+    transition: 200ms cubic-bezier(0.3, 0.27, 0.11, 0.97);
+  }
 }
-
 .nav-bar__link, .nav-bar__link:visited {
   display: block;
   text-align: center;
@@ -280,12 +331,30 @@
   margin-top: -1px;
 }
 
-#primary-nav-menu {
-  transition: all 500ms;
-  opacity: 0;
-  transform: translateY(-150%);
+.scroll-locked {
+  overflow: hidden;
 }
-#primary-nav-menu.active {
+
+@media (hover) {
+  .scroll-locked {
+    overflow: unset;
+  }
+}
+.primary-nav {
+  transition: all 200ms;
+  transform: translateX(100%);
+}
+.primary-nav.active {
+  transform: translateY(0%);
+}
+
+.primary-nav .nav-bar__link {
+  transition: all 300ms 200ms;
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.primary-nav.active .nav-bar__link {
   opacity: 1;
   transform: translateY(0%);
 }
@@ -333,7 +402,7 @@
   font-weight: var(--f-weight-bold);
   color: var(--c-main);
   text-decoration: none;
-  z-index: 999;
+  z-index: 998;
   transition: all 300ms cubic-bezier(0.3, 0.27, 0.11, 0.97);
 }
 .btn:hover {
@@ -389,4 +458,14 @@
   z-index: -999;
   position: absolute;
   right: 0;
+}
+
+img {
+  display: none !important;
+}
+
+@media (hover) {
+  img {
+    display: inline-block !important;
+  }
 }/*# sourceMappingURL=style.css.map */
