@@ -44,3 +44,46 @@
 }
 
 
+
+@media (hover) {
+    // #### main grid
+    .main-grid {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(6, minmax(100px, auto));
+    }
+
+    // ## main grid items
+    .main-grid__section {
+        grid-column: 1/9;
+    }
+
+    // #### sections grid
+    .section-grid {
+        display:grid;
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    .section-grid__container {
+	    grid-column: 2/8;
+    } 
+
+    // #### footer grid
+    .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    // ## footer grid items
+    .footer-grid {
+
+        &__info {
+            grid-column: 2/4;
+        }
+    
+        &__nav {
+            grid-column: 4/8;
+        }
+    }    
+}
+
