@@ -1,9 +1,28 @@
-#primary-nav-menu {
-    transition: all 500ms;
-    opacity: 0;
-    transform: translateY(-150%);
+.scroll-locked {
+    overflow: hidden;
+}
+@media (hover) {
+    .scroll-locked {
+        overflow: unset;
+    } 
+}
+
+.primary-nav {
+    transition: all 200ms;
+    transform: translateX(100%);
+
     &.active {
-        opacity: 1;
         transform: translateY(0%);
     }
+}
+
+.primary-nav .nav-bar__link {
+    transition: all 300ms 200ms;
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+.primary-nav.active .nav-bar__link {
+    opacity: 1;
+    transform: translateY(0%);
 }
