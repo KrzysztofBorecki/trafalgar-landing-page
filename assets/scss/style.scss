@@ -2,8 +2,10 @@
 @use "./base-styles";
 @use "./sections";
 @use "./grid";
-@use "./navbar";
+@use "./navigation-general";
 @use "./navbar-animation";
+@use "./navbar";
+@use "./navigation-footer";
 @use "./logo";
 @use "./elements";
 
