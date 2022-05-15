@@ -1,13 +1,6 @@
-// #### general nav styles
-.nav-list {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
-
 // #### mobile nav
 // ## mobile nav general styles
-.mobile-top-bar{
+.mobile-nav-bar{
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -17,7 +10,7 @@
 }
 
 @media (hover) {
-    .mobile-top-bar{
+    .mobile-nav-bar{
         display: block;
         height: unset;
         background-color: unset;
@@ -151,12 +144,6 @@
         &::after {
             display: none;
         }
-    }
-}
-
-@media (hover) {
-    .nav-bar__link{
-        transition: 200ms cubic-bezier(.3,.27,.11,.97);
     }
 }
 
