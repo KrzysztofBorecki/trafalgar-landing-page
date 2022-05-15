@@ -11,7 +11,13 @@
 	min-height: 100vh;
 	width: 100%;
 	background-color: var(--c-bg-main);
-	position: relative;
+	// position: relative;
+	text-align: center;
+}
+@media (hover) {
+	.page {
+		text-align: initial;
+	}
 }
 
 .section-mobile {
