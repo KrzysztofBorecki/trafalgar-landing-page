@@ -1,14 +1,14 @@
-.scroll-locked {
+.noscroll {
     overflow: hidden;
 }
 
 @media (hover) {
-    .scroll-locked {
+    .noscroll {
         overflow: unset;
     } 
 }
 
-.primary-nav {
+.navbar-navigation {
     transition: all 200ms;
     transform: translateX(100%);
 
@@ -17,19 +17,19 @@
     }
 }
 
-.primary-nav .nav-bar__link {
+.navbar-navigation .navbar__link {
     transition: all 300ms 200ms;
     opacity: 0;
     transform: translateY(100%);
 }
 
-.primary-nav.active .nav-bar__link {
+.navbar-navigation.active .navbar__link {
     opacity: 1;
     transform: translateY(0%);
 }
 
 @media (hover) {
-    .primary-nav {
+    .navbar-navigation {
         transition: unset;
         transform: unset;
     
@@ -38,12 +38,12 @@
         }
     }
 
-    .primary-nav .nav-bar__link {
+    .navbar-navigation .navbar__link {
         transition: 200ms cubic-bezier(.3,.27,.11,.97);
         opacity: unset;
         transform: unset;
     }
-    .primary-nav.active .nav-bar__link {
+    .navbar-navigation.active .navbar__link {
         opacity: unset;
         transform: unset;
     }
