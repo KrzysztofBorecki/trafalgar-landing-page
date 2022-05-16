@@ -1,9 +1,7 @@
 .noscroll {
     overflow: hidden;
-}
 
-@media (hover) {
-    .noscroll {
+    @media (hover) {
         overflow: unset;
     } 
 }
@@ -17,13 +15,13 @@
     }
 }
 
-.navbar-navigation .navbar__link {
+.navbar-navigation .navbar-navigation__link {
     transition: all 300ms 200ms;
     opacity: 0;
     transform: translateY(100%);
 }
 
-.navbar-navigation.active .navbar__link {
+.navbar-navigation.active .navbar-navigation__link {
     opacity: 1;
     transform: translateY(0%);
 }
@@ -38,12 +36,12 @@
         }
     }
 
-    .navbar-navigation .navbar__link {
+    .navbar-navigation .navbar-navigation__link {
         transition: 200ms cubic-bezier(.3,.27,.11,.97);
         opacity: unset;
         transform: unset;
     }
-    .navbar-navigation.active .navbar__link {
+    .navbar-navigation.active .navbar-navigation__link {
         opacity: unset;
         transform: unset;
     }
