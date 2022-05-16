@@ -1,11 +1,10 @@
 'use strict'
 
 const PAGE_ID = "page";
-const PRIMARY_NAV_ID = 'primary-nav';
-const NAV_BAR_MOBILE__BUTTON_ID = 'nav-bar-mobile__button';
-const ELEMENT_IDS = [PAGE_ID, PRIMARY_NAV_ID, NAV_BAR_MOBILE__BUTTON_ID];
+const NAVBAR_NAVIGATION_ID = 'navbar-navigation';
+const NAVBAR_MOBILE__BUTTON_ID = 'navbar-mobile__button';
+const ELEMENT_IDS = [PAGE_ID, NAVBAR_NAVIGATION_ID, NAVBAR_MOBILE__BUTTON_ID];
 const ARIA_EXPANDED = 'aria-expanded';
-const elements = getElements();
 
 function getParsedElementId(elementId) {
     return elementId.split(/(?:--|-|__|_)/g).map((word, idx) => {
@@ -31,7 +30,7 @@ function getElements() {
 
 
 function toggleScrollLock(element) {
-    element.classList.toggle('scroll-locked');
+    element.classList.toggle('noscroll');
 }
 
 function toggleClassActive(element) {
@@ -49,9 +48,9 @@ function toggleAriaExpanded(element) {
 function handleMobileNav() {
     const elements = getElements();
     toggleScrollLock(elements.page);
-    toggleClassActive(elements.primaryNav);
-    toggleClassActive(elements.navBarMobileButton);
-    toggleAriaExpanded(elements.navBarMobileButton);
+    toggleClassActive(elements.navbarNavigation);
+    toggleClassActive(elements.navbarMobileButton);
+    toggleAriaExpanded(elements.navbarMobileButton);
 }
 
-getElement(NAV_BAR_MOBILE__BUTTON_ID).addEventListener('click', handleMobileNav);
+getElement(NAVBAR_MOBILE__BUTTON_ID).addEventListener('click', handleMobileNav);
