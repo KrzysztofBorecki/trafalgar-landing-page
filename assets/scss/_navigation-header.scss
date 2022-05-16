@@ -10,31 +10,28 @@
 
 .navbar-desktop {
     display: block;
-    height: var(--nav-height-desktop);
-}
+    height: var(--nav-height-mobile);
 
-@media (hover) {
-    .navbar-desktop {
+    @media (hover) {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        height: var(--nav-height-desktop);
     }
 }
 
 
 // #### mobile nav
 // ## mobile nav general styles
-.navbar-mobile{
+.navbar-mobile {
     display: flex;
     justify-content:space-between;
     align-items: center;
-    height: var(--nav-height-desktop);
+    height: var(--nav-height-mobile);
     position: relative;
     background-color: var(--c-bg-main);
-}
 
-@media (hover) {
-    .navbar-mobile{
+    @media (hover) {
         display: block;
         height: unset;
         background-color: unset;
@@ -104,6 +101,7 @@
 
 .navbar-navigation {
     height: 100vh;
+    padding-top: 20px;
     background: var(--c-bg-menu); 
 }
 
@@ -111,21 +109,22 @@
 @media (hover) {
     .navbar-navigation {
         height: unset;
+        padding-top: unset;
     }
 }
 
-.navbar__menu {
+.navbar-navigation__menu {
     display: block;
 }
 
 @media (hover) {
-    .navbar__menu {
+    .navbar-navigation__menu {
         display: flex;
         justify-content: space-between;	
     }
 }
 
-.navbar__item {
+.navbar-navigation__item {
     display: block;
     overflow: hidden;
 
@@ -139,7 +138,7 @@
 }
 
 @media (hover) {
-    .navbar__item {
+    .navbar-navigation__item {
         display: inline-block;
         font-size: 0;
 
@@ -149,7 +148,7 @@
     }
 }
 
-.navbar__link, .navbar__link:visited {
+.navbar-navigation__link, .navbar-navigation__link:visited {
     display: block;
     text-align:center;
     font-size: var(--f-size-secondary);
@@ -160,26 +159,26 @@
 }
 
 @media (hover) {
-    .navbar__link, .navbar__link:visited {
+    .navbar-navigation__link, .navbar-navigation__link:visited {
         display:inline-block;
         margin-top: 0.3em;
     }
 }
 
 
-.navbar__link--active, .navbar__link--active:visited, .navbar__link:hover {
+.navbar-navigation__link--active, .navbar-navigation__link--active:visited, .navbar-navigation__link:hover {
     font-weight: var(--f-weight-bold);
 	color: var(--c-text-menu-active)
 }
 
 // @media (hover) {
-//     .navbar__link--active, .navbar__link:hover {
+//     .navbar-navigation__link--active, .navbar-navigation__link:hover {
 //         font-weight: var(--f-weight-bold);
 //         color: var(--c-text-menu-active)
 //     }
 // }
 
-.navbar__link::before {
+.navbar-navigation__link::before {
     display: block;
     content: attr(data-title);
     font-weight: var(--f-weight-bold);
