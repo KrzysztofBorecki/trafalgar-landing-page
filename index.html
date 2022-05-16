@@ -14,37 +14,40 @@
 	<link rel="stylesheet" href="./assets/css/normalize.css" />
 	<link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body id="page" class="page noscroll">
     <header class="header-grid navbar">
         <div class="header-grid__navbar navbar-desktop">
-            <div class="navbar-mobile section-mobile">
+            <div class="navbar-mobile mobile-padding">
             <!-- V 2.0 -->
                 <a class="logo" href="/"  aria-label="Trafalgar logo">
                     <span class="logo__icon" aria-hidden="true">T</span>
                     <span class="logo__text" aria-hidden="true">Trafalgar</span>
                 </a>
-
+                <!-- !!! in final version REMOVE class 'active' !!! -->
                 <button id="navbar-mobile__button" class="navbar-mobile__button active" aria-controls="navbar-navigation" aria-expanded="true">
                     <span></span>
                 </button> 
             </div> 
 
-            <nav id="navbar-navigation" class="navbar-navigation active section-mobile">
-                <ul class="navbar__menu nav-list active">
-                    <li class="navbar__item">
-                        <a class="navbar__link navbar__link--active" href="/" data-title="Home">Home</a>
+            <!-- !!! in final version REMOVE class 'active' !!! -->
+            <nav id="navbar-navigation" class="navbar-navigation mobile-padding active">
+                <!-- !!! in final version REMOVE class 'active' !!! -->
+                <ul class="navbar-navigation__menu nav-list active">
+                    <li class="navbar-navigation__item">
+                        <a class="navbar-navigation__link navbar-navigation__link--active" href="/" data-title="Home">Home</a>
                     </li>
-                    <li class="navbar__item">
-                        <a class="navbar__link" href="#" data-title="Find a doctor">Find a doctor</a>
+                    <li class="navbar-navigation__item">
+                        <a class="navbar-navigation__link" href="#" data-title="Find a doctor">Find a doctor</a>
                     </li>
-                    <li class="navbar__item">
-                        <a class="navbar__link" href="#" data-title="Apps">Apps</a>
+                    <li class="navbar-navigation__item">
+                        <a class="navbar-navigation__link" href="#" data-title="Apps">Apps</a>
                     </li>
-                    <li class="navbar__item">
-                        <a class="navbar__link" href="#" data-title="Testimonials">Testimonials</a>
+                    <li class="navbar-navigation__item">
+                        <a class="navbar-navigation__link" href="#" data-title="Testimonials">Testimonials</a>
                     </li>
-                    <li class="navbar__item">
-                        <a class="navbar__link" href="#" data-title="About us">About us</a>
+                    <li class="navbar-navigation__item">
+                        <a class="navbar-navigation__link" href="#" data-title="About us">About us</a>
                     </li>
                 </ul>
             </nav>
@@ -52,7 +55,7 @@
     </header>
 
     <main class="main-grid">
-        <section class="main-grid__section section-mobile section-hero-container">
+        <section class="main-grid__section mobile-padding section-hero-container">
             <div class="section-grid decor">
                 <img class="decor-dots--hero" src="./assets/images/png/decor-dots.png" alt="decor dots" aria-hidden="true">	
     
@@ -72,7 +75,7 @@
             </div>
         </section>
 
-        <section class="main-grid__section	section-grid section-mobile decor">
+        <section class="main-grid__section	section-grid mobile-padding decor">
             <img class="decor-bg-left" src="./assets/images/png/decor-background-01.png" alt="decor background" aria-hidden="true">
             <div class="section-grid__container">
                 <img class="decor-dots--services" src="./assets/images/png/decor-dots.png" alt="decor dots" aria-hidden="true">
@@ -168,7 +171,7 @@
             </div>
         </section>
 
-        <section class="main-grid__section section-grid section-mobile">
+        <section class="main-grid__section section-grid mobile-padding">
             <div class="section-grid__container">
             <div class="section-containter">
                 <img src="./assets/images/png/illustration-02.png" alt="Healthcare image 1" aria-hidden="true" />
@@ -187,7 +190,7 @@
             </div>
         </section>
 
-        <section class="main-grid__section section-grid section-mobile">
+        <section class="main-grid__section section-grid mobile-padding">
             <div class="section-grid__container">
             <div class="section-containter">
                 <article>
@@ -207,7 +210,7 @@
             </div>
         </section>
 
-        <section class="main-grid__section section-grid section-mobile"> 
+        <section class="main-grid__section section-grid mobile-padding"> 
             <div class="section-grid__container">
             <h2>
                 What our customer are saying
@@ -232,7 +235,7 @@
             </div>
         </section>
 
-        <section class="main-grid__section section-grid section-mobile decor">
+        <section class="main-grid__section section-grid mobile-padding decor">
             <div class="section-grid__container">
             <h2>
                 Check our our latest article
@@ -289,7 +292,7 @@
 
     </main>
 
-    <footer class="footer-grid decor section-mobile">
+    <footer class="footer-grid mobile-padding decor">
         <img src="./assets/images/Vector.svg" alt="">
         <img class="decor-dots--footer" src="./assets/images/png/decor-dots.png" alt="decor dots" aria-hidden="true">
         <div class="footer-grid__info">
@@ -307,24 +310,24 @@
             </div>
         </div>
 
-        <nav id="secondary-nav" class="footer-grid__nav">
-            <ul class="footer-nav nav-list">
+        <nav id="footer-navigation" class="footer-grid__nav">
+            <ul class="footer-navigation__menu nav-list">
                 <li>
                     <ul>
                         <li>
                             <h3>Company</h3>
                         </li>
                         <li>
-                            <a class="footer-nav__link" href="" data-title="About">About</a>
+                            <a class="footer-navigation__link" href="" data-title="About">About</a>
                         </li>
                         <li>
-                            <a class="footer-nav__link" href="" data-title="Testimonials">Testimonials</a>
+                            <a class="footer-navigation__link" href="" data-title="Testimonials">Testimonials</a>
                         </li>
                         <li>
-                            <a class="footer-nav__link" href="" data-title="Find a doctor">Find a doctor</a>
+                            <a class="footer-navigation__link" href="" data-title="Find a doctor">Find a doctor</a>
                         </li>
                         <li>
-                            <a class="footer-nav__link" href="" data-title="Apps">Apps</a>
+                            <a class="footer-navigation__link" href="" data-title="Apps">Apps</a>
                         </li>
                     </ul>
                 </li>
@@ -334,16 +337,16 @@
                             <h3>Region</h3>
                         </li>
                         <li>
-                            <a class="footer-nav__link" href="" data-title="Indonesia">Indonesia</a>
+                            <a class="footer-navigation__link" href="" data-title="Indonesia">Indonesia</a>
                         </li>
                         <li>
-                            <a class="footer-nav__link" href="" data-title="Singapore">Singapore</a>
+                            <a class="footer-navigation__link" href="" data-title="Singapore">Singapore</a>
                         </li>
                         <li>
-                            <a class="footer-nav__link" href="" data-title="Hongkong">Hongkong</a>
+                            <a class="footer-navigation__link" href="" data-title="Hongkong">Hongkong</a>
                         </li>
                         <li>
-                            <a class="footer-nav__link" href="" data-title="Canada">Canada</a>
+                            <a class="footer-navigation__link" href="" data-title="Canada">Canada</a>
                         </li>
                     </ul>
                 </li>
@@ -353,16 +356,16 @@
                             <h3>Help</h3>
                         </li>
                         <li>
-                            <a class="footer-nav__link" href="" data-title="Help center">Help center</a>
+                            <a class="footer-navigation__link" href="" data-title="Help center">Help center</a>
                         </li>
                         <li>
-                            <a class="footer-nav__link" href="" data-title="Contact support">Contact support</a>
+                            <a class="footer-navigation__link" href="" data-title="Contact support">Contact support</a>
                         </li>
                         <li>
-                            <a class="footer-nav__link" href=""  data-title="Instructions">Instructions</a>
+                            <a class="footer-navigation__link" href=""  data-title="Instructions">Instructions</a>
                         </li>
                         <li>
-                            <a class="footer-nav__link" href="" data-title="How it works">How it works</a>
+                            <a class="footer-navigation__link" href="" data-title="How it works">How it works</a>
                         </li>
                     </ul>
                 </li>
