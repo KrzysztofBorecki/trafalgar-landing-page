@@ -1,0 +1,58 @@
+ // #### margins
+.margin {
+    &-large{
+        margin-top: 0;
+        margin-bottom: 70px;
+    }
+
+    &-medium{
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+
+    &-small{
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    &-nav-bar{
+        margin-top: 0.3em;
+    }
+
+    &-footer-nav{
+        margin-top: 0.51em;
+    }
+}
+
+ // #### heading size
+.heading { 
+    &-hero {
+        font-size: var(--f-size-h1)
+    }
+    
+    &-large {
+        font-size: var(--f-size-h2);
+    }
+
+    &-medium {
+        font-size: var(--f-size-h3);
+    }
+
+    &-small {
+        font-size: var(--f-size-h4);
+    }
+
+    &-footer {
+        font-size: var(--f-size-footer-h);
+    }
+}
+
+ // #### heading weight
+.heading-bold {
+	font-weight: var(--f-weight-bold);
+}
+
+ // #### heading width
+.heading-short {
+	max-width: 16ch;
+}
