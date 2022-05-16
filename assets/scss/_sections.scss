@@ -1,4 +1,6 @@
 // #### sections
+
+
 .section-containter {
 	display: flex;
 	justify-content: space-between;
@@ -7,11 +9,8 @@
 .section-hero-container {
     height: 100vh;
     padding-top: 100px;
+	// box-sizing: border-box;
 }
-
-
-
-
 
 .section--center {
 	display: flex;
@@ -19,9 +18,7 @@
 	align-items: center;
   }
 
-
-
-.section-padding{
+.section-padding {
 	padding: 3rem 6.5rem;
 }
 
