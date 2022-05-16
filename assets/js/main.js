@@ -2,13 +2,13 @@
 
 const PAGE_ID = "page";
 const PRIMARY_NAV_ID = 'primary-nav';
-const MOBILE_NAV_BUTTON_ID = 'mobile-nav-button';
-const ELEMENT_IDS = [PAGE_ID, PRIMARY_NAV_ID, MOBILE_NAV_BUTTON_ID];
+const NAV_BAR_MOBILE__BUTTON_ID = 'nav-bar-mobile__button';
+const ELEMENT_IDS = [PAGE_ID, PRIMARY_NAV_ID, NAV_BAR_MOBILE__BUTTON_ID];
 const ARIA_EXPANDED = 'aria-expanded';
 const elements = getElements();
 
 function getParsedElementId(elementId) {
-    return elementId.split('-').map((word, idx) => {
+    return elementId.split(/(?:--|-|__|_)/g).map((word, idx) => {
         if (!idx) return word;
 
         return `${word[0].toUpperCase()}${word.slice(1)}`;
@@ -50,8 +50,8 @@ function handleMobileNav() {
     const elements = getElements();
     toggleScrollLock(elements.page);
     toggleClassActive(elements.primaryNav);
-    toggleClassActive(elements.mobileNavButton);
-    toggleAriaExpanded(elements.mobileNavButton);
+    toggleClassActive(elements.navBarMobileButton);
+    toggleAriaExpanded(elements.navBarMobileButton);
 }
 
-getElement(MOBILE_NAV_BUTTON_ID).addEventListener('click', handleMobileNav);
+getElement(NAV_BAR_MOBILE__BUTTON_ID).addEventListener('click', handleMobileNav);
