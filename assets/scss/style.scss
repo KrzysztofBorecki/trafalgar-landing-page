@@ -10,9 +10,12 @@
 @use "./navigation-header";
 @use "./navigation-footer";
 
+@use "./articles";
+@use "./testimonials";
+@use "./pagination";
 
 @use "./logo";
 @use "./elements";
-@use "./pagination";
+@use "./carousel";
 
 @use "./DISABLE";
