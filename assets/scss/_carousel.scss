@@ -1,0 +1,24 @@
+.carousel {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	overflow: hidden;
+}
+
+.carousel__item {
+	grid-column: 1/2;
+  	grid-row: 1/2;
+	transition: 1000ms;
+}
+
+.carousel__item--next {
+	transform: translateX(100%);
+}
+
+.carousel__item--previous {
+	transform: translateX(-100%);
+}
+
+.carousel__item--active {
+	transform: translateX(0%);
+}
