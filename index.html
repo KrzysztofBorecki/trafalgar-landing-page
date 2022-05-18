@@ -80,7 +80,7 @@
             <img class="decor-bg-left" src="./assets/images/png/decor-background-01.png" alt="decor background" aria-hidden="true">
             <div class="section-grid__container">
                 <img class="decor-dots--services" src="./assets/images/png/decor-dots.png" alt="decor dots" aria-hidden="true">
-                <h2>
+                <h2 class="heading-bar heading-bar--center heading-bar--dark">
                     Our serices
                 </h2>
                 <p>
@@ -177,7 +177,7 @@
             <div class="section-containter">
                 <img src="./assets/images/png/illustration-02.png" alt="Healthcare image 1" aria-hidden="true" />
                 <article>
-                    <h2>
+                    <h2 class="heading-bar heading-bar--left heading-bar--dark">
                         Leading healthcare providers
                     </h2>
                     <p>
@@ -212,36 +212,83 @@
         </section>
 
         <section class="main-grid__section section-grid mobile-padding"> 
-            <div class="section-grid__container">
-            <h2>
-                What our customer are saying
-            </h2>
-            <div>
-                <article>
-                    <div>
-                        <img src="./assets/images/png/avatar-01.png" alt="avatar" />
-                        <div>
-                            <p>Edward Newgate</p>
-                            <p>Founder Circle</p>
-                        </div>
+            <div class="section-grid__container testimonials-container">
+                <div class="testimonials">
+                    <h2 class="testimonials__header heading-large heading-bar heading-bar--center heading-bar--light">
+                        What our customer are saying
+                    </h2>
+                    <div id="testimonials" class="carousel">
+                        <article id="testimonials-art-01" class="article carousel__item carousel__item--previous">
+                            <div class="testimonials__info">
+                                <img  class="testimonials__img" src="./assets/images/jpg/avatar-01.jpg" alt="avatar" />
+                                <div class="testimonials__personal">
+                                    <p class="testimonials__name">Edward Newgate</p>
+                                    <p class="testimonials__footer">Founder Circle</p>
+                                </div>
+                            </div>
+                            <blockquote>
+                                <p class="testimonials__quote">Our dedicated patient engagement app and web portal allow you to
+                                access information instantaneously (no tedeous form, long calls, or
+                                administrative hassle) and securely</p>
+                            </blockquote>
+                        </article>
+                        <article id="testimonials-art-02" class="article carousel__item carousel__item--active">
+                            <div class="testimonials__info">
+                                <img  class="testimonials__img" src="./assets/images/jpg/avatar-02.jpg" alt="avatar" />
+                                <div class="testimonials__personal">
+                                    <p class="testimonials__name">Alisa Mazer</p>
+                                    <p class="testimonials__footer">Founder Circle</p>
+                                </div>
+                            </div>
+                            <blockquote>
+                                <p class="testimonials__quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Tempora possimus esse facilis, excepturi nisi saepe quis adipisci illum beatae nesciunt 
+                                    odio reiciendis hic cumque autem totam architecto recusandae quod! Itaque!</p>
+                            </blockquote>
+                        </article>
+                        <article id="testimonials-art-03" class="article carousel__item carousel__item--next">
+                            <div class="testimonials__info">
+                                <img  class="testimonials__img" src="./assets/images/jpg/avatar-03.jpg" alt="avatar" />
+                                <div class="testimonials__personal">
+                                    <p class="testimonials__name">Thomas Bergsen</p>
+                                    <p class="testimonials__footer">Founder Circle</p>
+                                </div>
+                            </div>
+                            <blockquote>
+                                <p class="testimonials__quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                                    Debitis ut doloremque ipsam dicta deleniti repellat quam aspernatur aperiam a, 
+                                    nam quae saepe impedit quisquam! Earum.</p>
+                            </blockquote>
+                        </article>
+                        <article id="testimonials-art-04" class="article carousel__item carousel__item--next">
+                            <div class="testimonials__info">
+                                <img  class="testimonials__img" src="./assets/images/jpg/avatar-04.jpg" alt="avatar" />
+                                <div class="testimonials__personal">
+                                    <p class="testimonials__name">Anastasia Mensen</p>
+                                    <p class="testimonials__footer">Founder Circle</p>
+                                </div>
+                            </div>
+                            <blockquote>
+                                <p class="testimonials__quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Amet, optio velit recusandae officia voluptates distinctio expedita soluta, saepe doloremque, 
+                                    blanditiis necessitatibus nulla quia! Pariatur vitae repellendus eos.</p>
+                            </blockquote>
+                        </article>
                     </div>
-                    <blockquote>
-                        <p>Our dedicated patient engagement app and web portal allow you to
-                        access information instantaneously (no tedeous form, long calls, or
-                        administrative hassle) and securely</p>
-                    </blockquote>
-                </article>
-            </div>
-            
-            <div class="pagination">
-                <button class="pagination-arrow-btn" type="button"><img src="./assets/images/svg/arrow-left.svg" alt="arrow left" /></button>
-                <div class="pagination-dots">
-                    <button class="pagination-dot-btn active" type="button"><img src="./assets/images/svg/dot.svg" alt="dot"></button>
-                    <button class="pagination-dot-btn" type="button"><img src="./assets/images/svg/dot.svg" alt="dot"></button>
-                    <button class="pagination-dot-btn" type="button"><img src="./assets/images/svg/dot.svg" alt="dot"></button>
-                    <button class="pagination-dot-btn" type="button"><img src="./assets/images/svg/dot.svg" alt="dot"></button>
                 </div>
-                <button class="pagination-arrow-btn"><img src="./assets/images/svg/arrow-right.svg" alt="arrow right" /></button>
+                
+                <div class="pagination-container">
+                    <div class="pagination">
+                        <button id="carousel__btn--previous" class="pagination-arrow-btn" type="button"><img src="./assets/images/svg/arrow-left.svg" alt="arrow left" /></button>
+                        <div class="pagination-dots">
+                            <button id="carousel__dot-btn-01" class="pagination-dot-btn" type="button"><img src="./assets/images/svg/dot.svg" alt="dot"></button>
+                            <button id="carousel__dot-btn-02" class="pagination-dot-btn pagination-dot-btn--active" type="button"><img src="./assets/images/svg/dot.svg" alt="dot"></button>
+                            <button id="carousel__dot-btn-03" class="pagination-dot-btn" type="button"><img src="./assets/images/svg/dot.svg" alt="dot"></button>
+                            <button id="carousel__dot-btn-04" class="pagination-dot-btn" type="button"><img src="./assets/images/svg/dot.svg" alt="dot"></button>
+                        </div>
+                        <button id="carousel__btn--next" class="pagination-arrow-btn"><img src="./assets/images/svg/arrow-right.svg" alt="arrow right" /></button>
+                    </div>
+                </div>
             </div>
         </section>
 
