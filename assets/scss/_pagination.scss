@@ -1,9 +1,16 @@
+// pagination-container with explicit 'display: block' for sefety reasons
+.pagination-container {
+    display: block;
+    margin-top: 42px;
+}
+
 .pagination {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 340px;
     height: 52px;
+    margin: 0 auto;
 }
 
 .pagination-arrow-btn {
@@ -31,7 +38,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    // width: 95px;
 }
 
 .pagination-dot-btn {
@@ -53,12 +59,12 @@
     &:hover {
         opacity: 1;
     }
+}
 
-    &.active {
-        opacity: 1;
-        
-        &:hover {
-            opacity: 0.6;
-        }
+.pagination-dot-btn--active {
+    opacity: 1;
+    
+    &:hover {
+        opacity: 0.6;
     }
 }
