@@ -15,11 +15,14 @@ const CAROUSEL_ITEM_ACTIVE_CLASS = 'carousel__item--active';
 const CAROUSEL_ITEM_NEXT_CLASS = 'carousel__item--next';
 const CAROUSEL_STOP_CLASS = 'carousel__stop';
 
-const CAROUSEL_DOT_BTN_1_ID = 'carousel__dot-btn--1';
-const CAROUSEL_DOT_BTN_2_ID = 'carousel__dot-btn--2';
-const CAROUSEL_DOT_BTN_3_ID = 'carousel__dot-btn--3';
-const CAROUSEL_DOT_BTN_4_ID = 'carousel__dot-btn--4';
+const CAROUSEL_DOT_BTN_1_ID = 'carousel__dot-btn-01';
+const CAROUSEL_DOT_BTN_2_ID = 'carousel__dot-btn-02';
+const CAROUSEL_DOT_BTN_3_ID = 'carousel__dot-btn-03';
+const CAROUSEL_DOT_BTN_4_ID = 'carousel__dot-btn-04';
 const CAROUSEL_DOT_BTN_IDS = [CAROUSEL_DOT_BTN_1_ID, CAROUSEL_DOT_BTN_2_ID, CAROUSEL_DOT_BTN_3_ID, CAROUSEL_DOT_BTN_4_ID]
+
+const PAGINATION_DOT_BTN_CLASS = 'pagination-dot-btn';
+const PAGINATION_DOT_BTN_ACTIVE_CLASS = "pagination-dot-btn--active";
 
 function getParsedElementId(elementId) {
     return elementId.split(/(?:--|-|__|_)/g).map((word, idx) => {
@@ -127,6 +130,29 @@ function setNextStatus() {
     });
 }
 
+
+function resetCarouselDotBtns() {
+    const paginationBtns = document.querySelectorAll(`.${PAGINATION_DOT_BTN_CLASS}`);
+
+    Array.from(paginationBtns).forEach((element) => {
+        element.classList.remove(PAGINATION_DOT_BTN_ACTIVE_CLASS);
+    });
+}
+
+function setCarouselDotBtnActiveStatus() {
+    const carouselItems = document.querySelectorAll(`.${CAROUSEL_ITEM_CLASS}`);
+
+    Array.from(carouselItems).forEach((element, idx) => {
+        const activeElement = element.classList.contains(CAROUSEL_ITEM_ACTIVE_CLASS);
+
+        if (activeElement) {
+            const paginationBtns = document.querySelectorAll(`.${PAGINATION_DOT_BTN_CLASS}`);
+
+            Array.from(paginationBtns)[idx].classList.add(PAGINATION_DOT_BTN_ACTIVE_CLASS);
+        }
+    })
+}
+
 function handleCarouselMainBtn(e) {
     switch (e.currentTarget.id) {
         case CAROUSEL_BTN_PREVIOUS_ID:
@@ -140,6 +166,9 @@ function handleCarouselMainBtn(e) {
         default:
             return;
     }
+
+    resetCarouselDotBtns()
+    setCarouselDotBtnActiveStatus();
 }
 
 getElement(NAVBAR_MOBILE__BUTTON_ID).addEventListener('click', handleMobileNav);
