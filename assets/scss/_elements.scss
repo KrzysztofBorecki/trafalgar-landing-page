@@ -84,3 +84,31 @@
 	position: absolute;
 	right: 0;
 }
+
+// #### heading bar center/left/right
+.heading-bar {
+	&::after {
+		content: "";
+		display: block;
+		width: 1.5em;
+		margin-top: 0.83em;
+		margin-bottom: -2px;
+	}
+
+	&--center::after {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&--left::after {
+		margin-right: auto;
+	}
+
+	&--light::after {
+		border-bottom: 2px solid var(--c-text-white);
+	}
+
+	&--dark::after {
+		border-bottom: 2px solid var(--c-text-dark);
+	}
+}
