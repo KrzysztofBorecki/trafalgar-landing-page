@@ -1,0 +1,10 @@
+.article {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1.875rem;
+    @media (hover) {
+        flex-flow: row wrap;
+        justify-content: space-between;
+        // before it was -> justify-content: space-around;
+    }
+}
