@@ -8,6 +8,8 @@
 .carousel__item {
 	grid-column: 1/2;
   	grid-row: 1/2;
+	// justify-content: center;
+	// align-items: center;
 	transition: 1000ms;
 }
 
@@ -21,4 +23,8 @@
 
 .carousel__item--active {
 	transform: translateX(0%);
+}
+
+.carousel__item--intermediate {
+	opacity: 0;
 }
