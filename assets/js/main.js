@@ -13,6 +13,7 @@ const CAROUSEL_ITEM_CLASS = 'carousel__item';
 const CAROUSEL_ITEM_PREVIOUS_CLASS = 'carousel__item--previous';
 const CAROUSEL_ITEM_ACTIVE_CLASS = 'carousel__item--active';
 const CAROUSEL_ITEM_NEXT_CLASS = 'carousel__item--next';
+const CAROUSEL_ITEM_INTERMEDIATE_CLASS = 'carousel__item--intermediate';
 const CAROUSEL_STOP_CLASS = 'carousel__stop';
 
 const CAROUSEL_DOT_BTN_1_ID = 'carousel__dot-btn-01';
@@ -23,6 +24,8 @@ const CAROUSEL_DOT_BTN_IDS = [CAROUSEL_DOT_BTN_1_ID, CAROUSEL_DOT_BTN_2_ID, CARO
 
 const PAGINATION_DOT_BTN_CLASS = 'pagination-dot-btn';
 const PAGINATION_DOT_BTN_ACTIVE_CLASS = "pagination-dot-btn--active";
+
+const timerId1 = [];
 
 function getParsedElementId(elementId) {
     return elementId.split(/(?:--|-|__|_)/g).map((word, idx) => {
@@ -86,7 +89,7 @@ function handleMobileNav() {
     toggleAriaExpanded(elements.navbarMobileButton);
 }
 
-function setPreviousStatus() {
+function handleSetPreviousItem() {
     const elements = document.getElementsByClassName(CAROUSEL_ITEM_CLASS);
 
     Array.from(elements).forEach((element, idx, array) => {
@@ -104,7 +107,7 @@ function setPreviousStatus() {
     });
 }
 
-function setNextStatus() {
+function handleSetNextItem() {
     const elements = document.getElementsByClassName(CAROUSEL_ITEM_CLASS);
 
     if (document.querySelector(`.${CAROUSEL_STOP_CLASS}`)) {
@@ -116,6 +119,7 @@ function setNextStatus() {
         const isStopped = element.classList.contains(CAROUSEL_STOP_CLASS);
 
         if (isStopped) {
+            element.classList.remove(CAROUSEL_STOP_CLASS);
             return;
         }
 
@@ -123,6 +127,7 @@ function setNextStatus() {
             if (!(idx === array.length - 1)) {
                 element.classList.remove(CAROUSEL_ITEM_ACTIVE_CLASS);
                 element.classList.add(CAROUSEL_ITEM_PREVIOUS_CLASS);
+                array[idx + 1].classList.remove(CAROUSEL_ITEM_NEXT_CLASS);
                 array[idx + 1].classList.add(CAROUSEL_ITEM_ACTIVE_CLASS);
                 array[idx + 1].classList.add(CAROUSEL_STOP_CLASS);
             }
@@ -154,13 +159,16 @@ function setCarouselDotBtnActiveStatus() {
 }
 
 function handleCarouselMainBtn(e) {
+
+    removeIntermediateStyle()
+
     switch (e.currentTarget.id) {
         case CAROUSEL_BTN_PREVIOUS_ID:
-                setPreviousStatus();
+                handleSetPreviousItem();
             break;
 
         case CAROUSEL_BTN_NEXT_ID:
-                setNextStatus();
+                handleSetNextItem();
             break;
 
         default:
@@ -176,4 +184,79 @@ getElement(NAVBAR_MOBILE__BUTTON_ID).addEventListener('click', handleMobileNav);
 CAROUSEL_BTN_IDS.forEach((elementId) => {
     const element = getElement(elementId);
     element.addEventListener('click', handleCarouselMainBtn);
+});
+
+function getParsedElementValue(element) {
+    return parseInt(element.value);
+}
+
+function getParsedCurrentTargetValue(e) {
+    const currentTargetElement = e.currentTarget;
+    return getParsedElementValue(currentTargetElement);
+}
+
+function getParsedActiveDotBtnIdx() {
+    const activeDotBtn = document.querySelector(`.${PAGINATION_DOT_BTN_ACTIVE_CLASS}`);
+    return getParsedElementValue(activeDotBtn);
+}
+
+function getAbsoluteDifferenceValue(firstValue, secondValue) {
+    return Math.abs(firstValue - secondValue);
+}
+
+function removeIntermediateStyle() {
+    Array.from(document.querySelectorAll('.carousel__item')).forEach((element) => {
+        element.classList.remove(CAROUSEL_ITEM_INTERMEDIATE_CLASS);
+    });
+}
+
+function addIntermediateStyle(pressedDotBtn) {
+    const endIdx = getParsedElementValue(pressedDotBtn);
+    const startIdx = getParsedActiveDotBtnIdx(); 
+
+    if ((Math.abs(endIdx - startIdx)) > 1) {
+        Array.from(document.querySelectorAll('.carousel__item')).forEach((_,idx,array) => {
+            if ((idx > (Math.min(endIdx, startIdx) - 1)) && (idx < (Math.max(endIdx, startIdx) - 1))) {
+                array[idx].classList.add(CAROUSEL_ITEM_INTERMEDIATE_CLASS);
+            }
+        }); 
+    }
+}
+
+function handleCarouselDotBtn(e) {
+    const pressedDotBtn = e.currentTarget;
+
+    clearTimeout(timerId1.pop());
+    removeIntermediateStyle();
+    addIntermediateStyle(pressedDotBtn);
+
+    let timerId = setTimeout(function callback() {
+
+        const endIdx = getParsedElementValue(pressedDotBtn);
+        const startIdx = getParsedActiveDotBtnIdx(); 
+
+        if (endIdx === startIdx) {
+            return;
+        }
+
+        if (startIdx > endIdx){
+            handleSetPreviousItem();
+        }
+
+        if (startIdx < endIdx){
+            handleSetNextItem();
+        }
+
+        resetCarouselDotBtns()
+        setCarouselDotBtnActiveStatus();
+
+        timerId = setTimeout(callback, 0);
+    }, 0);
+
+    timerId1.push(timerId);
+}
+
+CAROUSEL_DOT_BTN_IDS.forEach((elementId) => {
+    const element = getElement(elementId);
+    element.addEventListener('click', handleCarouselDotBtn);
 });
