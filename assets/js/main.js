@@ -13,7 +13,7 @@ const CAROUSEL_ITEM_CLASS = 'carousel__item';
 const CAROUSEL_ITEM_PREVIOUS_CLASS = 'carousel__item--previous';
 const CAROUSEL_ITEM_ACTIVE_CLASS = 'carousel__item--active';
 const CAROUSEL_ITEM_NEXT_CLASS = 'carousel__item--next';
-const CAROUSEL_ITEM_INTERMEDIATE_CLASS = 'carousel__item--intermediate';
+const CAROUSEL_ITEM_HIDDEN_CLASS = 'carousel__item--hidden';
 const CAROUSEL_STOP_CLASS = 'carousel__stop';
 
 const CAROUSEL_DOT_BTN_1_ID = 'carousel__dot-btn-01';
@@ -206,7 +206,7 @@ function getAbsoluteDifferenceValue(firstValue, secondValue) {
 
 function removeIntermediateStyle() {
     Array.from(document.querySelectorAll('.carousel__item')).forEach((element) => {
-        element.classList.remove(CAROUSEL_ITEM_INTERMEDIATE_CLASS);
+        element.classList.remove(CAROUSEL_ITEM_HIDDEN_CLASS);
     });
 }
 
@@ -217,7 +217,7 @@ function addIntermediateStyle(pressedDotBtn) {
     if ((Math.abs(endIdx - startIdx)) > 1) {
         Array.from(document.querySelectorAll('.carousel__item')).forEach((_,idx,array) => {
             if ((idx > (Math.min(endIdx, startIdx) - 1)) && (idx < (Math.max(endIdx, startIdx) - 1))) {
-                array[idx].classList.add(CAROUSEL_ITEM_INTERMEDIATE_CLASS);
+                array[idx].classList.add(CAROUSEL_ITEM_HIDDEN_CLASS);
             }
         }); 
     }
