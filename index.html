@@ -218,7 +218,7 @@
                         What our customer are saying
                     </h2>
                     <div id="testimonials" class="carousel">
-                        <article id="testimonials-art-01" class="article carousel__item carousel__item--previous">
+                        <article id="testimonials-art-01" class="article carousel__item carousel__item--active">
                             <div class="testimonials__info">
                                 <img  class="testimonials__img" src="./assets/images/jpg/avatar-01.jpg" alt="avatar" />
                                 <div class="testimonials__personal">
@@ -232,7 +232,7 @@
                                 administrative hassle) and securely</p>
                             </blockquote>
                         </article>
-                        <article id="testimonials-art-02" class="article carousel__item carousel__item--active">
+                        <article id="testimonials-art-02" class="article carousel__item carousel__item--next">
                             <div class="testimonials__info">
                                 <img  class="testimonials__img" src="./assets/images/jpg/avatar-02.jpg" alt="avatar" />
                                 <div class="testimonials__personal">
@@ -281,10 +281,10 @@
                     <div class="pagination">
                         <button id="carousel__btn--previous" class="pagination-arrow-btn" type="button"><img src="./assets/images/svg/arrow-left.svg" alt="arrow left" /></button>
                         <div class="pagination-dots">
-                            <button id="carousel__dot-btn-01" class="pagination-dot-btn" type="button"><img src="./assets/images/svg/dot.svg" alt="dot"></button>
-                            <button id="carousel__dot-btn-02" class="pagination-dot-btn pagination-dot-btn--active" type="button"><img src="./assets/images/svg/dot.svg" alt="dot"></button>
-                            <button id="carousel__dot-btn-03" class="pagination-dot-btn" type="button"><img src="./assets/images/svg/dot.svg" alt="dot"></button>
-                            <button id="carousel__dot-btn-04" class="pagination-dot-btn" type="button"><img src="./assets/images/svg/dot.svg" alt="dot"></button>
+                            <button id="carousel__dot-btn-01" value="01" class="pagination-dot-btn pagination-dot-btn--active" type="button"><img src="./assets/images/svg/dot.svg" alt="dot"></button>
+                            <button id="carousel__dot-btn-02" value="02" class="pagination-dot-btn" type="button"><img src="./assets/images/svg/dot.svg" alt="dot"></button>
+                            <button id="carousel__dot-btn-03" value="03" class="pagination-dot-btn" type="button"><img src="./assets/images/svg/dot.svg" alt="dot"></button>
+                            <button id="carousel__dot-btn-04" value="04" class="pagination-dot-btn" type="button"><img src="./assets/images/svg/dot.svg" alt="dot"></button>
                         </div>
                         <button id="carousel__btn--next" class="pagination-arrow-btn"><img src="./assets/images/svg/arrow-right.svg" alt="arrow right" /></button>
                     </div>
@@ -349,7 +349,7 @@
 
     </main>
 
-    <footer class="footer-grid mobile-padding decor">
+    <footer class="footer-grid footer-section mobile-padding decor">
         <img src="./assets/images/Vector.svg" alt="">
         <img class="decor-dots--footer" src="./assets/images/png/decor-dots.png" alt="decor dots" aria-hidden="true">
         <div class="footer-grid__info">
@@ -358,7 +358,7 @@
                 <span class="logo__icon logo__icon--light" aria-hidden="true">T</span>
                 <span class="logo__text logo__text--light" aria-hidden="true">Trafalgar</span>
             </a>
-            <div>
+            <div class="info--footer">
                 <p>
                     Trafalgar provides progressive, and affordable healthcare, accessible
                     on mobile and online for everyone
