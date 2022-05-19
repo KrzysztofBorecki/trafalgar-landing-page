@@ -1,9 +1,7 @@
-img {
-    display: none !important;
-}
-
-@media (hover) {
-    img {
+.HIDE-IMG {
+    display: none;
+    @media (hover){
         display: inline-block !important;
     }
 }
+
