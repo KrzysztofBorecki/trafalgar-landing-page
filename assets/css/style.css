@@ -442,6 +442,14 @@
   font-weight: var(--f-weight-bold);
 }
 
+.footer-section {
+  background-image: linear-gradient(0deg, var(--c-bg-grad-start) 0%, var(--c-bg-grad-end) 100%);
+  padding: 6.8125rem 0;
+  color: var(--c-text-white);
+  font-weight: var(--f-weight-light);
+  justify-content: space-between;
+}
+
 .article {
   display: flex;
   flex-flow: column wrap;
@@ -709,7 +717,7 @@
 .carousel__item {
   grid-column: 1/2;
   grid-row: 1/2;
-  transition: 1000ms;
+  transition: transform 1000ms;
 }
 
 .carousel__item--next {
@@ -722,6 +730,10 @@
 
 .carousel__item--active {
   transform: translateX(0%);
+}
+
+.carousel__item--intermediate {
+  opacity: 0;
 }
 
 img {
