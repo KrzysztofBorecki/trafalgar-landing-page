@@ -8,3 +8,14 @@
         // before it was -> justify-content: space-around;
     }
 }
+
+.article--hero {
+    position: relative;
+    padding-top: 100px;
+	@media (hover) {
+		max-width: 65ch;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+}
