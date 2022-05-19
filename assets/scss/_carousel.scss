@@ -12,7 +12,7 @@
 	// align-items: center;
 
 	// ! transform is important here
-	// ! we don't want transition on opacity from .carousel__item--intermediate
+	// ! we don't want transition on opacity from .carousel__item--hidden
 	transition: transform 1000ms;
 }
 
@@ -28,6 +28,6 @@
 	transform: translateX(0%);
 }
 
-.carousel__item--intermediate {
+.carousel__item--hidden {
 	opacity: 0;
 }
