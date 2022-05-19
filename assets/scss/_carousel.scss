@@ -10,7 +10,10 @@
   	grid-row: 1/2;
 	// justify-content: center;
 	// align-items: center;
-	transition: 1000ms;
+
+	// ! transform is important here
+	// ! we don't want transition on opacity from .carousel__item--intermediate
+	transition: transform 1000ms;
 }
 
 .carousel__item--next {
