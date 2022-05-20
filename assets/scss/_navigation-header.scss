@@ -98,13 +98,11 @@
     }
 }
 
-
 .navbar-navigation {
     height: 100vh;
     padding-top: 20px;
     background: var(--c-bg-menu); 
 }
-
 
 @media (hover) {
     .navbar-navigation {
@@ -164,7 +162,6 @@
         margin-top: 0.3em;
     }
 }
-
 
 .navbar-navigation__link--active, .navbar-navigation__link--active:visited, .navbar-navigation__link:hover {
     font-weight: var(--f-weight-bold);
