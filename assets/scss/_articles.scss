@@ -11,11 +11,47 @@
 
 .article--hero {
     position: relative;
-    padding-top: 100px;
+    // padding-top: 100px;
 	@media (hover) {
 		max-width: 65ch;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 	}
+}
+
+.article__item {
+    flex: 1 1 30ch;
+    border-radius: 1.25rem;
+    background: var(--c-text-white);
+    overflow: hidden;
+    filter: drop-shadow(10px 40px 50px rgba(229, 233, 246, 0.4));
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.item__image {
+    width: 100%;
+}
+.item__box {
+    padding: 2.0625rem;
+}
+
+.item_info {
+    color: var(--c-text-gray);
+    line-height: 1.75;
+    max-width: 40ch;
+}
+
+.item_info--footer {
+    font-size: var(--f-size-secondary);
+    font-weight: var(--f-weight-light);
+    color: var(--c-text-white);
+    line-height: 1.556em;
+}
+
+.hero-text {
+    font-size: var(--f-size-h4);
 }
