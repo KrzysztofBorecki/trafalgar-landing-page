@@ -48,7 +48,7 @@
 
     padding: 10px;
     border-radius: 10px;
-    opacity: 0.3;
+    opacity: var(--opacity-active-strong);
 
     display: flex;
     align-items: center;
@@ -65,6 +65,6 @@
     opacity: 1;
     
     &:hover {
-        opacity: 0.6;
+        opacity: var(--opacity-active-medium);
     }
 }
