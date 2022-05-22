@@ -50,6 +50,7 @@
 	// #### font-size
 	//16px
 	--f-size-main: 1rem;
+	--f-size-quote-mobile: var(--f-size-main);
 	//18px
 	--f-size-secondary: 1.125rem;
 	//17px
@@ -66,10 +67,11 @@
 	--f-size-h4: 1.3125rem;
 	//24px
 	--f-size-h3: 1.5rem;
+	//30px
+	--f-size-h2-mobile: 1.875rem;
 	//36px
 	--f-size-h2: 2.25rem;
-	//40px
-	--f-size-h1-mobile: 2.5rem;
+	--f-size-h1-mobile: var(--f-size-h2);
 	//48px
 	--f-size-h1: 3rem;
 
