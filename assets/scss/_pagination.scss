@@ -1,16 +1,22 @@
 // pagination-container with explicit 'display: block' for sefety reasons
 .pagination-container {
     display: block;
-    margin-top: 42px;
+    
+    @media (hover) {
+        margin-top: 42px;
+    }
 }
 
 .pagination {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 340px;
+    width: 270px;
     height: 52px;
     margin: 0 auto;
+    @media (hover) {
+        width: 340px;
+    }
 }
 
 .pagination-arrow-btn {
