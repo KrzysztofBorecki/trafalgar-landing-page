@@ -5,6 +5,10 @@
     align-items: center;
 	font-weight: var(--f-weight-bold);
 
+    &--footer{
+        margin-bottom: 12.4px;
+    }
+
     &__icon {
         font-size: var(--f-size-t);
         color: var(--c-text-white);
