@@ -1,187 +1,195 @@
-// #### primary nav
 .navbar {
-    background-color: var(--c-bg-menu);
-    position: fixed;
-    z-index: 999;
-    top:0;
-    left: 0;
-    right: 0;
+	position: fixed;
+	top:0;
+	left: 0;
+	right: 0;
+	z-index: 999;
+	background-color: var(--c-bg-menu);
 }
 
 .navbar-desktop {
-    display: block;
-    height: var(--nav-height-mobile);
+	height: var(--nav-height-mobile);
+	display: block;
 
-    @media (hover) {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: var(--nav-height-desktop);
-    }
+	@media (hover) {
+		height: var(--nav-height-desktop);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 10px;
+	}
 }
 
-
-// #### mobile nav
-// ## mobile nav general styles
 .navbar-mobile {
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    height: var(--nav-height-mobile);
-    position: relative;
-    background-color: var(--c-bg-main);
+	position: relative;
+	height: var(--nav-height-mobile);
+	background-color: var(--c-bg-main);
+	display: flex;
+	justify-content:space-between;
+	align-items: center;
 
-    @media (hover) {
-        display: block;
-        height: unset;
-        background-color: unset;
-    }
+	@media (hover) {
+		display: block;
+		height: unset;
+		background-color: unset;
+	}
 }
 
-// ## mobile nav button
 .navbar-mobile__button {
-    display: block;
-    width: 41px;
-    height: 41px;
-    background: none;
-    border: none;
-    overflow: hidden;
-    padding: 0;
-    cursor: pointer;
+	overflow: hidden;
+	width: 41px;
+	height: 41px;
+	padding: 0;
+	border: none;
+	background: none;
+	display: block;
+	cursor: pointer;
 
-    &::before,
-    &::after,
-    & span {
-      background: var(--c-text-menu-static);
-      content: "";
-      display: block;
-      height: 4px;
-      border-radius: 2px;
-      transition: 300ms cubic-bezier(.86,-0.3,.09,1.31);
-    }
-    
-    &::before {
-        transform: translateY(15px);
-    }
-    &::after{ 
-        transform: translateY(-15px)
-    }  
+	&::before,
+	&::after,
+	& span {
+		content: "";
+		height: 4px;
+		border-radius: 2px;
+		background: var(--c-text-menu-static);
+		display: block;
+		transition: 300ms cubic-bezier(.86,-0.3,.09,1.31);
+	}
+	
+	&::before {
+		transform: translateY(15px);
+	}
+	&::after{ 
+		transform: translateY(-15px)
+	}  
 
-    &.active {
-        &::before {
-            transform: translateY(100%) rotate(45deg);
-        }
-        &::after {
-            transform: translateY(-100%) rotate(-45deg);
-        }
-        & span {
-            transform: rotate(45deg) scale(0);
-        }
+	&.active {
+		&::before {
+			transform: translateY(100%) rotate(45deg);
+		}
+		&::after {
+			transform: translateY(-100%) rotate(-45deg);
+		}
+		& span {
+			transform: rotate(45deg) scale(0);
+		}
 
-        &:hover::before,
-        &:hover::after,
-        &:hover span {
-            background: var(--c-text-menu-active)
-        }
-    }
+		&:hover::before,
+		&:hover::after,
+		&:hover span {
+			background: var(--c-text-menu-active)
+		}
+	}
 
-    &:hover::before,
-    &:hover::after,
-    &:hover span {
-        background: var(--c-text-menu-active);
-    }
+	&:hover::before,
+	&:hover::after,
+	&:hover span {
+		background: var(--c-text-menu-active);
+	}
 }
 
 @media (hover) {
-    .navbar-mobile__button {
-        display: none;
-    }
+	.navbar-mobile__button {
+		display: none;
+	}
 }
 
 .navbar-navigation {
-    height: 100vh;
-    padding-top: 20px;
-    background: var(--c-bg-menu); 
+	height: 100vh;
+	padding-top: 20px;
+	background: var(--c-bg-menu); 
 }
 
 @media (hover) {
-    .navbar-navigation {
-        height: unset;
-        padding-top: unset;
-    }
+	.navbar-navigation {
+		height: unset;
+		padding-top: unset;
+	}
 }
 
 .navbar-navigation__menu {
-    display: block;
+	display: block;
 }
 
 @media (hover) {
-    .navbar-navigation__menu {
-        display: flex;
-        justify-content: space-between;	
-    }
+	.navbar-navigation__menu {
+		min-width: 450px;	
+		display: flex;
+		justify-content: space-between;
+	}
 }
 
 .navbar-navigation__item {
-    display: block;
-    overflow: hidden;
+	display: block;
+	overflow: hidden;
 
-    &::after {
-        display: block;
-        content: "";
-        width: 100%;
-        height: 1px;
-        background: var(--c-text-menu-static);
-    }
+	&::after {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 1px;
+		background: var(--c-text-menu-static);
+	}
 }
 
 @media (hover) {
-    .navbar-navigation__item {
-        display: inline-block;
-        font-size: 0;
+	.navbar-navigation__item {
+		display: inline-block;
+		font-size: 0;
 
-        &::after {
-            display: none;
-        }
-    }
+		&::after {
+			display: none;
+		}
+	}
 }
 
 .navbar-navigation__link, .navbar-navigation__link:visited {
-    display: block;
-    text-align:center;
-    font-size: var(--f-size-secondary);
-    font-weight: var(--f-weight-normal);
-    color: var(--c-text-menu-static);
-    text-decoration: none;
-    padding: 1rem 1.25rem;  
+	padding: 1rem 1.25rem; 
+	display: block;
+	text-align:center;
+	text-decoration: none;
+	font-size: var(--f-size-secondary);
+	font-weight: var(--f-weight-normal);
+	color: var(--c-text-menu-static);
+
+	@media (hover) {
+		padding: 1rem 0.625rem; 
+		font-size: var(--f-size-main);
+
+		@media screen and (min-width: 710px) {
+			font-size: var(--f-size-secondary);
+		}
+		@media screen and (min-width: 1040px) {
+			padding: 1rem 1.25rem; 
+		}	
+	}
 }
 
 @media (hover) {
-    .navbar-navigation__link, .navbar-navigation__link:visited {
-        display:inline-block;
-        margin-top: 0.3em;
-    }
+	.navbar-navigation__link, .navbar-navigation__link:visited {
+		margin-top: 0.6em;
+		display:inline-block;
+
+		@media screen and (min-width: 710px) {
+			margin-top: 0.4em;
+		}
+	}
 }
 
 .navbar-navigation__link--active, .navbar-navigation__link--active:visited, .navbar-navigation__link:hover {
-    font-weight: var(--f-weight-bold);
+	font-weight: var(--f-weight-bold);
 	color: var(--c-text-menu-active)
 }
 
-// @media (hover) {
-//     .navbar-navigation__link--active, .navbar-navigation__link:hover {
-//         font-weight: var(--f-weight-bold);
-//         color: var(--c-text-menu-active)
-//     }
-// }
-
+// ! in FLEX CONTAINER:
+// ! provide constant width of Nav Link Btn (FLEX ITEM)
 .navbar-navigation__link::before {
-    display: block;
-    content: attr(data-title);
-    font-weight: var(--f-weight-bold);
-    height: 0;
-    overflow: hidden;
-    visibility: hidden;
-    margin-top: -1px;
+	overflow: hidden;
+	visibility: hidden;
+	content: attr(data-title);
+	height: 0;
+	margin-top: -1px;
+	display: block;
+	font-weight: var(--f-weight-bold);
 }
 
