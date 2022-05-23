@@ -27,6 +27,10 @@ const PAGINATION_DOT_BTN_ACTIVE_CLASS = "pagination-dot-btn--active";
 
 const timerId1 = [];
 
+const FOOTER_NAVIGATION_BTN_CLASS = 'footer-navigation__btn';
+const FOOTER_NAVIGATION_BTN_ACTIVE_CLASS = 'footer-navigation__btn--active';
+const FOOTER_NAVIGATION_LIST_UNFOLDED_CLASS = 'footer-navigation__list--unfolded';
+
 function getParsedElementId(elementId) {
     return elementId.split(/(?:--|-|__|_)/g).map((word, idx) => {
         if (!idx) return word;
@@ -83,6 +87,7 @@ function toggleAriaExpanded(element) {
 
 function handleMobileNav() {
     const elements = getNavigationElements();
+
     toggleScrollLock(elements.page);
     toggleClassActive(elements.navbarNavigation);
     toggleClassActive(elements.navbarMobileButton);
@@ -108,7 +113,7 @@ function handleSetPreviousItem() {
 }
 
 function handleSetNextItem() {
-    const elements = document.getElementsByClassName(CAROUSEL_ITEM_CLASS);
+    const elements = document.querySelectorAll(`.${CAROUSEL_ITEM_CLASS}`);
 
     if (document.querySelector(`.${CAROUSEL_STOP_CLASS}`)) {
         document.querySelector(`.${CAROUSEL_STOP_CLASS}`).classList.remove(CAROUSEL_STOP_CLASS);
@@ -127,6 +132,7 @@ function handleSetNextItem() {
             if (!(idx === array.length - 1)) {
                 element.classList.remove(CAROUSEL_ITEM_ACTIVE_CLASS);
                 element.classList.add(CAROUSEL_ITEM_PREVIOUS_CLASS);
+
                 array[idx + 1].classList.remove(CAROUSEL_ITEM_NEXT_CLASS);
                 array[idx + 1].classList.add(CAROUSEL_ITEM_ACTIVE_CLASS);
                 array[idx + 1].classList.add(CAROUSEL_STOP_CLASS);
@@ -192,11 +198,13 @@ function getParsedElementValue(element) {
 
 function getParsedCurrentTargetValue(e) {
     const currentTargetElement = e.currentTarget;
+
     return getParsedElementValue(currentTargetElement);
 }
 
 function getParsedActiveDotBtnIdx() {
     const activeDotBtn = document.querySelector(`.${PAGINATION_DOT_BTN_ACTIVE_CLASS}`);
+
     return getParsedElementValue(activeDotBtn);
 }
 
@@ -258,5 +266,50 @@ function handleCarouselDotBtn(e) {
 
 CAROUSEL_DOT_BTN_IDS.forEach((elementId) => {
     const element = getElement(elementId);
+
     element.addEventListener('click', handleCarouselDotBtn);
 });
+
+
+function toggleClassOnElement(element, className) {
+    element.classList.toggle(className);
+}
+
+function handleFooterNav() {
+
+    if (this.classList.contains(FOOTER_NAVIGATION_BTN_ACTIVE_CLASS)){
+        toggleClassOnElement(this, FOOTER_NAVIGATION_BTN_ACTIVE_CLASS);
+        toggleClassOnElement(this.nextElementSibling, FOOTER_NAVIGATION_LIST_UNFOLDED_CLASS);
+    
+    } else if (document.querySelector(`.${FOOTER_NAVIGATION_BTN_ACTIVE_CLASS}`)) {
+        const activeBtn = document.querySelector(`.${FOOTER_NAVIGATION_BTN_ACTIVE_CLASS}`);
+        const unfoldedList = document.querySelector(`.${FOOTER_NAVIGATION_LIST_UNFOLDED_CLASS}`);
+    
+        toggleClassOnElement(activeBtn, FOOTER_NAVIGATION_BTN_ACTIVE_CLASS);
+        toggleClassOnElement(unfoldedList, FOOTER_NAVIGATION_LIST_UNFOLDED_CLASS);
+        toggleClassOnElement(this, FOOTER_NAVIGATION_BTN_ACTIVE_CLASS);
+        toggleClassOnElement(this.nextElementSibling, FOOTER_NAVIGATION_LIST_UNFOLDED_CLASS);
+    
+    } else {
+        toggleClassOnElement(this, FOOTER_NAVIGATION_BTN_ACTIVE_CLASS);
+        toggleClassOnElement(this.nextElementSibling, FOOTER_NAVIGATION_LIST_UNFOLDED_CLASS);
+    }
+
+    // old working version
+    // if (this.classList.contains(FOOTER_NAVIGATION_BTN_ACTIVE_CLASS)){
+    //     this.classList.toggle(FOOTER_NAVIGATION_BTN_ACTIVE_CLASS);
+    //     this.nextElementSibling.classList.toggle(FOOTER_NAVIGATION_LIST_UNFOLDED_CLASS);
+    // } else if (document.querySelector(`.${FOOTER_NAVIGATION_BTN_ACTIVE_CLASS}`)) {
+    //     document.querySelector(`.${FOOTER_NAVIGATION_BTN_ACTIVE_CLASS}`).classList.toggle(FOOTER_NAVIGATION_BTN_ACTIVE_CLASS);
+    //     document.querySelector(`.${FOOTER_NAVIGATION_LIST_UNFOLDED_CLASS}`).classList.toggle(FOOTER_NAVIGATION_LIST_UNFOLDED_CLASS);
+    //     this.classList.toggle(FOOTER_NAVIGATION_BTN_ACTIVE_CLASS);
+    //     this.nextElementSibling.classList.toggle(FOOTER_NAVIGATION_LIST_UNFOLDED_CLASS);
+    // } else {
+    //     this.classList.toggle(FOOTER_NAVIGATION_BTN_ACTIVE_CLASS);
+    //     this.nextElementSibling.classList.toggle(FOOTER_NAVIGATION_LIST_UNFOLDED_CLASS);
+    // }
+}
+
+Array.from(document.querySelectorAll(`.${FOOTER_NAVIGATION_BTN_CLASS}`)).forEach((element) => {
+    element.addEventListener('click', handleFooterNav);
+})
