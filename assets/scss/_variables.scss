@@ -1,48 +1,32 @@
 :root {
-	// ###### FIGMA start
-
-	// ==== REMOVE START
 	//#### opacity
 	--opacity-active-strong: 0.3;
 	--opacity-active-medium: 0.6;
-	// ## menu
-	// --opacity-text-menu: 0.5;
-	// ## testimonials btn
-
-	// ==== REMOVE END
 
 	// #### color
 	// ## page
 	--c-main: #458ff6;
-
 	// ## read more btn
 	--c-secondary: #4089ed; 
-
 	// ## logo and menu
 	--c-text-logo: #233348;
 	--c-text-logo-light: #5b9bf3;
 	--c-text-menu-active: #1f1534;
 	--c-text-menu-static: #8f8a99;
-	
 	// ## text
 	--c-text-dark: #000000;
 	--c-text-gray: #7d7987;
 	--c-text-white: #ffffff;
-	
 	// ## background page
 	--c-bg-main: #ffffff;
-
 	// ## background menu
 	--c-bg-menu: #fffffff9;
-
 	// ## background btn
 	--c-bg-btn-light: #ffffff99;
 	--c-bg-btn-main: var(--c-main);
-
 	// ## background gradient
 	--c-bg-grad-start: #5a98f2;
 	--c-bg-grad-end: #67c3f3;
-
 	// ## testimonials btn
 	--c-btn-arr: #458ff6;
 	--c-btn-circ: #5b9bf3;
@@ -80,12 +64,12 @@
 	--f-weight-normal: 400;
 	--f-weight-bold: 700;
 
-	// #### navbar height
+	// #### height
+	// ## navbar 
 	--nav-height-desktop: 100px;
 	--nav-height-mobile: 80px;
 
-	// #### mobile padding
+	// #### padding 
+	// ## mobile page
 	--p-mobile: 20px;
-
-	// ###### Figma end
 }
