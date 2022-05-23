@@ -1,7 +1,8 @@
 @use "./variables";
 @use "./presets";
 
-@use "./base-styles";
+@use "./page";
+@use "./image";
 @use "./sections";
 @use "./grid";
 
@@ -12,6 +13,7 @@
 
 @use "./footer";
 
+@use "./info";
 @use "./articles";
 @use "./testimonials";
 @use "./pagination";
@@ -19,5 +21,3 @@
 @use "./logo";
 @use "./elements";
 @use "./carousel";
-
-@use "./DISABLE";
