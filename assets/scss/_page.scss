@@ -1,0 +1,30 @@
+*, ::before, ::after {
+	box-sizing: border-box;
+}
+
+.trafalgar {
+	color: var(--c-text-dark);
+	font-size: var(--f-size-main);
+	font-family: 'Mulish', sans-serif;
+
+}
+
+.page {
+	width: 100%;
+	min-height: 100vh;
+	background-color: var(--c-bg-main);
+	text-align: center;
+
+	@media (hover) {
+		min-width: 660px;
+		text-align: initial;
+	}
+}
+
+.mobile-padding {
+	padding: 0 var(--p-mobile);
+
+	@media (hover) {
+		padding: 0 0;
+	}
+}
