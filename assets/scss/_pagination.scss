@@ -1,76 +1,71 @@
-// pagination-container with explicit 'display: block' for sefety reasons
 .pagination-container {
-    display: block;
-    
-    @media (hover) {
-        margin-top: 42px;
-    }
+	// pagination-container with explicit 'display: block' for sefety reasons
+	display: block;
+	
+	@media (hover) {
+		margin-top: 42px;
+	}
 }
 
 .pagination {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 270px;
-    height: 52px;
-    margin: 0 auto;
-    @media (hover) {
-        width: 340px;
-    }
+	width: 270px;
+	height: 52px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	@media (hover) {
+		width: 340px;
+	}
 }
 
 .pagination-arrow-btn {
-    background: none;
-    border: none;
-    overflow: hidden;
-    cursor: pointer;
+	overflow: hidden;
+	width: 52px;
+	height: 52px;
+	padding: 0;
+	background: none;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 200ms cubic-bezier(0.3, 0.27, 0.11, 0.97);
 
-    padding: 0;
-    width: 52px;
-    height: 52px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    transition: 200ms cubic-bezier(0.3, 0.27, 0.11, 0.97);
-
-    &:hover {
-        opacity: 0.3;
-    }
+	&:hover {
+		opacity: 0.3;
+	}
 }
 
 .pagination-dots {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .pagination-dot-btn {
-    background: none;
-    border: none;
-    overflow: hidden;
-    cursor: pointer;
+	overflow: hidden;
+	background: none;
+	padding: 10px;
+	border: none;
+	border-radius: 10px;
+	opacity: var(--opacity-active-strong);
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 200ms cubic-bezier(0.3, 0.27, 0.11, 0.97);
 
-    padding: 10px;
-    border-radius: 10px;
-    opacity: var(--opacity-active-strong);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    transition: 200ms cubic-bezier(0.3, 0.27, 0.11, 0.97);
-
-    &:hover {
-        opacity: 1;
-    }
+	&:hover {
+		opacity: 1;
+	}
 }
 
 .pagination-dot-btn--active {
-    opacity: 1;
-    
-    &:hover {
-        opacity: var(--opacity-active-medium);
-    }
+	opacity: 1;
+	
+	&:hover {
+		opacity: var(--opacity-active-medium);
+	}
 }
