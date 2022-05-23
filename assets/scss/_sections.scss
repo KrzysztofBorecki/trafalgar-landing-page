@@ -1,35 +1,53 @@
-// #### sections
+.section-height {
+	@media (hover) {
+		padding-bottom: 0;
+		min-height: 100vh;
+		padding-top: 100px;
+	}
+}
 
+.section-padding {
+	padding: 0rem 1.25rem;
 
-.section-containter {
-	display: flex;
-	justify-content: space-between;
+	@media (hover) {
+		padding: 3rem 2rem;
+
+		@media screen and (min-width: 1100px) {
+			padding: 3rem 6.5rem;
+		}
+	}
+}
+
+.section-container {
+	@media (hover) {
+		display: flex;
+		flex-flow: row wrap;
+	}
+
+	&--center {
+		@media (hover) {
+			display: flex;
+			flex-flow: column;
+			align-items: center;
+		}
+	}
+	&--testimonials {
+		@media (hover) {
+			display: flex;
+			flex-flow: column;
+			justify-content: center;
+		}
+	}
 }
 
 .section-hero-container {
-    height: 100vh;
-    padding-top: 100px;
-	// box-sizing: border-box;
+	padding-top: 80px;
+
+	@media (hover) {
+		padding-top: 100px;
+	}
 }
 
-.section--center {
-	display: flex;
-	flex-flow: column;
-	align-items: center;
-  }
-
-.section-padding {
-	padding: 3rem 6.5rem;
-}
-
-.section-padding--hero{
-	padding: 3rem 0;
-}
-
-
-.article--hero {
-	max-width: 65ch;
-	display: flex;
-    flex-direction: column;
-    justify-content: center;
+.section-hero {
+		height: 100%;
 }
