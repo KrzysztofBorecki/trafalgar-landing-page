@@ -1,38 +1,36 @@
 // #### trafalgar logo V.2.0
 .logo {
-    text-decoration: none;
+	text-decoration: none;
 	display: flex;
-    align-items: center;
+	align-items: center;
 	font-weight: var(--f-weight-bold);
 
-    &--footer{
-        margin-bottom: 12.4px;
-    }
-
-    &__icon {
-        font-size: var(--f-size-t);
-        color: var(--c-text-white);
-        background-color: var(--c-main);
-        width: 1.577em;
-        line-height: 1.577em;
-        border-radius: 1.577em;
-        text-align: center;
-        text-indent: -1px;
-        margin:0;
-    
-        &--light {
-            color: var(--c-text-logo-light);
-            background-color: var(--c-text-white);
-        }
-    }
-    
-    &__text {
-        font-size: var(--f-size-h3);
-        margin: 0 0 0 0.5em;
-        color: var(--c-text-logo);
-    
-        &--light {
-            color: var(--c-text-white);
-        }
-    }
-}   
+	&--footer{
+		margin-bottom: 12.4px;
+	}
+	&__icon {
+		font-size: var(--f-size-t);
+		color: var(--c-text-white);
+		background-color: var(--c-main);
+		width: 1.577em;
+		line-height: 1.577em;
+		border-radius: 1.577em;
+		text-align: center;
+		text-indent: -1px;
+		margin:0;
+	
+		&--light {
+			color: var(--c-text-logo-light);
+			background-color: var(--c-text-white);
+		}
+	}
+	&__text {
+		font-size: var(--f-size-h3);
+		margin: 0 0 0 0.5em;
+		color: var(--c-text-logo);
+	
+		&--light {
+			color: var(--c-text-white);
+		}
+	}
+}
