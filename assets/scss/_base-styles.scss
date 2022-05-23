@@ -17,8 +17,10 @@
 	background-color: var(--c-bg-main);
 	text-align: center;
 	@media (hover) {
+		min-width: 660px;
 		text-align: initial;
 	}
+
 }
 
 // #### mobile page padding L/R
@@ -27,5 +29,16 @@
 
 	@media (hover) {
 		padding: 0 0;
+	}
+}
+.image {
+	max-width: 100%;
+	height: auto;
+}
+
+.image-wrapper {
+	padding-bottom: 2ch;
+	@media (hover) {
+		padding-bottom: unset;
 	}
 }
