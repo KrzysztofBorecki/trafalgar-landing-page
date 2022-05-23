@@ -3,7 +3,6 @@
 	padding: var(--p-mobile) var(--p-mobile);
 	color: var(--c-text-white);
 	font-weight: var(--f-weight-light);
-	justify-content: space-between;
 	text-align: left;
 
 	@media (hover) {
@@ -14,16 +13,12 @@
 
 .footer-info__container {
 	margin: 0 0 20px 0;
-	// @media (hover) {
-	// 	margin-bottom: 0;
-	// 	display: flex;
-	// 	flex-flow: column nowrap;
-	// 	justify-content: space-between;
-	// }
+
 	@media (hover) {
 		margin: 0 auto;
+
 		@media screen and (min-width: 1170px) {
-		margin: 0 0;
+			margin: 0 0;
 		}
 	}
 }
@@ -32,17 +27,19 @@
 	&__trafalgar {
 		max-width: 35ch;
 		margin: 0 0 20px 0;
+
 		@media (hover) {
 			max-width: 60ch;
+			margin: 0 0 29px 0;
+
 			@media screen and (min-width: 1170px) {
 				max-width: 35ch;
 			}
 		}
 	}
 	&__rights {
-		// margin: 0 0 20px 0;
 		@media (hover) {
-			margin:0 0;
+			margin: 0 0;
 		}
 	}
 }
