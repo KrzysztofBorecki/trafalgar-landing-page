@@ -1,12 +1,3 @@
-
-// .testimonials-container {
-// 	@media (hover){
-// 		display: flex;
-// 		flex-flow: column;
-// 		justify-content: center;
-// 	}
-// }
-
 .testimonials {	
 	background-image: linear-gradient(0deg, var(--c-bg-grad-start) 0%, var(--c-bg-grad-end) 100%);
 	color: var(--c-text-white);
@@ -83,7 +74,10 @@
 
 .testimonials__blockquote {
 	margin: 0 0;
-
+	@media (min-width: 481px) {
+		display: flex;
+		align-items: center;
+	}
 	@media (hover) {
 		display: flex;
 		align-items: center;
