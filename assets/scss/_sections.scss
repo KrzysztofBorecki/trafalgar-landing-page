@@ -10,10 +10,12 @@
 	padding: 0rem 1.25rem;
 
 	@media (hover) {
-		padding: 3rem 2rem;
+		// was: padding: 3rem 2rem;
+		padding: 0 2rem 3rem 2rem;
 
 		@media screen and (min-width: 1100px) {
-			padding: 3rem 6.5rem;
+			// was: padding: 3rem 6.5rem;
+			padding: 0 6.5rem 3rem 6.5rem;
 		}
 	}
 }
@@ -25,10 +27,17 @@
 	}
 
 	&--center {
+		// @media (min-width: 1000px) {
+		// 	display: flex;
+		// 	flex-flow: column;
+		// 	align-items: center;
+		// 	margin-bottom: 20px;
+		// }
 		@media (hover) {
 			display: flex;
 			flex-flow: column;
 			align-items: center;
+			// margin-bottom: 0;
 		}
 	}
 	&--testimonials {
