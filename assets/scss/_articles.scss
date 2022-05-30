@@ -1,5 +1,5 @@
 .article-container {
-	@media (min-width: 1000px) {
+	@media (min-width: 800px) {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -19,13 +19,12 @@
 	&--services {
 		filter: drop-shadow(10px 40px 50px rgba(229, 233, 246, 0.4));
 		
-		@media (min-width: 1000px) {
+		@media (min-width: 800px) {
 			display: flex;
 			flex-flow: row wrap;
 			justify-content: space-between;
 			gap: 1.875rem;
 		}
-	
 		@media (hover) {
 			display: flex;
 			flex-flow: row wrap;
@@ -40,7 +39,6 @@
 			justify-content: center;
 			gap: 1.875rem;
 		}
-	
 		@media (hover) {
 			display: flex;
 			flex-flow: row wrap;
@@ -58,6 +56,8 @@
 
 .article-item {
 	&--hero {
+		flex-shrink: 1;
+
 		@media (hover) {
 			max-width: 65ch;
 			display: flex;
@@ -66,19 +66,15 @@
 		}
 	}
 	&--section {
-		max-width: 65ch;
-		@media (min-width: 481px) {
-			margin: 0 auto;
-		}
+		// max-width: 65ch;
+		// @media (min-width: 481px) {
+			// 	margin: 0 auto;
+			// }
+		flex-shrink: 1;
+
 		@media (hover) {
 			margin: 0 0;
 		}
-		
-		// @media (min-width: 481px) {
-		// 	display: flex;
-		// 	flex-flow: column;
-		// 	align-items: center;
-		// }
 	}
 	&--services {
 		overflow: hidden;
@@ -93,7 +89,8 @@
 		align-items: center;
 		gap: 10px;
 		margin-bottom: 1.25rem;
-		@media (min-width: 1000px) {
+
+		@media (min-width: 800px) {
 			margin-bottom: 0;
 		}
 		@media (hover) {
@@ -114,8 +111,7 @@
 			align-items: center;
 			align-content: start;
 			gap: 1.875rem;
-		}
-	
+		}	
 		@media (hover) {
 			display: flex;
 			flex-flow: row wrap;
@@ -145,7 +141,6 @@
 			align-items: flex-start;
 			margin-top: unset;
 		}
-	
 		@media (hover) {
 			display: flex;
 			flex-flow: column;
@@ -160,7 +155,6 @@
 	&__image-wraper {
 		height: 95px;
 		width: 100%;
-		// NEW flex: 1 1 50%;
 		flex: 1 1 50%;
 
 		@media (hover) {
