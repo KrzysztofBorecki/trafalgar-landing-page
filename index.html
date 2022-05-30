@@ -1,477 +1,473 @@
 <!DOCTYPE html>
 <html class="trafalgar" lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Template-Trafalgar</title>
-	<meta name="author" content="Krzysztof Borecki">
-	<meta name="keywords" content="template, trafalgar, html, css, javascript, js">
-	<link rel="icon" href="./assets/images/png/trafalgar-favicon.png">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="./assets/css/normalize.css" />
-	<link rel="stylesheet" href="./assets/css/style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Template-Trafalgar</title>
+        <meta name="author" content="Krzysztof Borecki">
+        <meta name="keywords" content="template, trafalgar, html, css, javascript, js">
+        <link rel="icon" href="./assets/images/png/trafalgar-favicon.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./assets/css/normalize.css" />
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
 
-<body id="page" class="page noscroll">
-    <header class="header-grid navbar">
-        <div class="header-grid__navbar navbar-desktop">
-            <div class="navbar-mobile mobile-padding">
-                <!-- V 2.0 -->
-                <a class="logo" href="/"  aria-label="Trafalgar logo">
-                    <span class="logo__icon" aria-hidden="true">T</span>
-                    <span class="logo__text" aria-hidden="true">Trafalgar</span>
-                </a>
-                <!-- !!! in final version REMOVE class 'active' !!! -->
-                <button id="navbar-mobile__button" class="navbar-mobile__button active" aria-controls="navbar-navigation" aria-expanded="true">
-                    <span></span>
-                </button> 
-            </div> 
+    <body id="page" class="page">
+        <header class="header-grid navbar">
+            <div class="header-grid__navbar navbar-desktop">
+                <div class="navbar-mobile mobile-padding">
+                    <!-- Logo V 2.0 -->
+                    <a class="logo" href="/"  aria-label="Trafalgar logo">
+                        <span class="logo__icon" aria-hidden="true">T</span>
+                        <span class="logo__text" aria-hidden="true">Trafalgar</span>
+                    </a>
+                    <button id="navbar-mobile__button" class="navbar-mobile__button" aria-controls="navbar-navigation" aria-expanded="true">
+                        <span></span>
+                    </button> 
+                </div> 
 
-            <!-- !!! in final version REMOVE class 'active' !!! -->
-            <nav id="navbar-navigation" class="navbar-navigation mobile-padding active">
-                <!-- !!! in final version REMOVE class 'active' !!! -->
-                <ul class="navbar-navigation__menu nav-list active">
-                    <li class="navbar-navigation__item">
-                        <a class="navbar-navigation__link navbar-navigation__link--active" href="/" data-title="Home">Home</a>
-                    </li>
-                    <li class="navbar-navigation__item">
-                        <a class="navbar-navigation__link" href="#" data-title="Find a doctor">Find a doctor</a>
-                    </li>
-                    <li class="navbar-navigation__item">
-                        <a class="navbar-navigation__link" href="#" data-title="Apps">Apps</a>
-                    </li>
-                    <li class="navbar-navigation__item">
-                        <a class="navbar-navigation__link" href="#" data-title="Testimonials">Testimonials</a>
-                    </li>
-                    <li class="navbar-navigation__item">
-                        <a class="navbar-navigation__link" href="#" data-title="About us">About us</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+                <nav id="navbar-navigation" class="navbar-navigation mobile-padding">
 
-    <main class="main-grid">
-        <section class="main-grid__section section-hero-container section-height">
-            <div class="section-grid decor--nooverflow mobile-padding section-hero">
-                <img class="decor-dots--hero" src="./assets/images/png/decor-dots.png" alt="decor dots" aria-hidden="true">	
-    
-                <div class="section-grid__container article-container article-container--hero">
-                    <article class="article-hero">
-                        <h1 class="heading-hero heading-bold heading-padding heading-short">
-                            Virtual healthcare for you
-                        </h1>
-                        <p class="item__info--hero item__info margin-medium">
-                            Trafalgar provides progressive, and affordable healthcare,
-                            accessible on mobile and online for everyone
-                        </p>
-                        <a class="btn btn--hero" href="#">Consult today</a>
-                    </article>
-                    <div class="image-wrapper">
-                        <img class="image" type="image/svg" src="./assets/images/png/illustration-01.png" alt="Healthcare image 1" aria-hidden="true" />
+                    <ul class="navbar-navigation__menu nav-list">
+                        <li class="navbar-navigation__item">
+                            <a class="navbar-navigation__link navbar-navigation__link--active" href="/" data-title="Home">Home</a>
+                        </li>
+                        <li class="navbar-navigation__item">
+                            <a class="navbar-navigation__link" href="#" data-title="Find a doctor">Find a doctor</a>
+                        </li>
+                        <li class="navbar-navigation__item">
+                            <a class="navbar-navigation__link" href="#" data-title="Apps">Apps</a>
+                        </li>
+                        <li class="navbar-navigation__item">
+                            <a class="navbar-navigation__link" href="#" data-title="Testimonials">Testimonials</a>
+                        </li>
+                        <li class="navbar-navigation__item">
+                            <a class="navbar-navigation__link" href="#" data-title="About us">About us</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main-grid">
+            <section class="main-grid__section section-hero-container section-height">
+                <div class="section-grid decor--nooverflow mobile-padding section-hero">
+                    <img class="decor-dots--hero" src="./assets/images/png/decor-dots.png" alt="decor dots" aria-hidden="true">	
+        
+                    <div class="section-grid__container article-container article-container--hero">
+                        <article class="article-item--hero">
+                            <h1 class="heading-hero heading-bold heading-padding heading-short">
+                                Virtual healthcare for you
+                            </h1>
+                            <p class="item__info--hero item__info margin-medium">
+                                Trafalgar provides progressive, and affordable healthcare,
+                                accessible on mobile and online for everyone
+                            </p>
+                            <a class="btn btn--hero" href="#">Consult today</a>
+                        </article>
+                        <div class="image-wrapper">
+                            <img class="image" type="image/svg" src="./assets/images/png/illustration-01.png" alt="illustration 1" aria-hidden="true" />
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="main-grid__section section-grid section-height mobile-padding decor--nooverflow ">
-            
-            <div class="section-grid__container section-container--center section-padding">
+            <section class="main-grid__section section-grid section-height mobile-padding decor--nooverflow ">
                 
-                <h2 class="
-                    heading-large
-                    heading-bold
-                    heading-bar
-                    heading-bar--dark
-                    heading-bar--center
-                ">
-                    Our services
-                </h2>
-                <p class="item__info item__info--section item__info--wide margin-medium">
-                    We provide to you the best choiches for you. Adjust it to your health
-                    needs and make sure your undergo treatment with our highly qualified
-                    doctors you can conslut with us which type of service is suitable for
-                    your health
-                </p>
+                <div class="section-grid__container section-container--center section-padding">
+                    
+                    <h2 class="
+                        heading-large
+                        heading-bold
+                        heading-bar
+                        heading-bar--dark
+                        heading-bar--center
+                    ">
+                        Our services
+                    </h2>
+                    <p class="item__info item__info--section item__info--wide margin-medium">
+                        We provide to you the best choiches for you. Adjust it to your health
+                        needs and make sure your undergo treatment with our highly qualified
+                        doctors you can conslut with us which type of service is suitable for
+                        your health
+                    </p>
 
-                <div class="article-services margin-large">
-                    <article class="article-services__item item__box">
-                        <div class="article-services__image-wraper">
-                            <img src="./assets/images/png/ico-01-search-doctor.png" alt="Search doctor icon" aria-hidden="true" />
-                        </div>
-                        <div class="article-services__info-wraper">
-                            <h3 class="heading-medium">Search doctor</h3>
-                            <p class="item__info item__info--card">
-                                Choose your doctor from thousands of specialist, general, and
-                                trusted hospitals
-                            </p>
-                        </div>
-                    </article>
-                    <article class="article-services__item item__box">
-                        <div class="article-services__image-wraper">
-                            <img src="./assets/images/png/ico-02-online-pharmacy.png" alt="Online pharmacy icon" aria-hidden="true" />
-                        </div>
-                        <div class="article-services__info-wraper">
-                            <h3 class="heading-medium">Online pharmacy</h3>
-                            <p class="item__info item__info--card">
-                                Buy your medicines with our mobile application with a simple
-                                delivery system
-                            </p>
-                        </div>
-                    </article>
-                    <article class="article-services__item item__box">
-                        <div class="article-services__image-wraper">
-                            <img src="./assets/images/png/ico-03-consultation.png" alt="Consultation icon" aria-hidden="true" />
-                        </div>
-                        <div class="article-services__info-wraper">
-                            <h3 class="heading-medium">Consultation</h3>
-                            <p class="item__info item__info--card">
-                                Free consultation with our trusted doctors and get the best
-                                recommendations
-                            </p>
-                        </div>
-                    </article>
-                    <article class="article-services__item item__box">
-                        <div class="article-services__image-wraper">
-                            <img src="./assets/images/png/ico-04-details-info.png" alt="Details info icon" aria-hidden="true" />
-                        </div>
-                        <div class="article-services__info-wraper">
-                            <h3 class="heading-medium">Details info</h3>
-                            <p class="item__info item__info--card">
-                                Free consultation with our trusted doctors and get the best
-                                recommendations
-                            </p>
-                        </div>
-                    </article>
-                    <article class="article-services__item item__box">
-                        <div class="article-services__image-wraper">
-                            <img src="./assets/images/png/ico-05-emergency-care.png" alt="Emergency care icon" aria-hidden="true" />
-                        </div>
-                        <div class="article-services__info-wraper">
-                            <h3 class="heading-medium">Emergency care</h3>
-                            <p class="item__info item__info--card">
-                                You can get 24/7 urgent care for yourself or your children and
-                                your lovely family
-                            </p>
-                        </div>
-                    </article>
-                    <article class="article-services__item item__box">
-                        <div class="article-services__image-wraper">
-                            <img src="./assets/images/png/ico-06-tracking.png" alt="Tracking icon" aria-hidden="true" />
-                        </div>
-                        <div class="article-services__info-wraper">
-                            <h3 class="heading-medium">Tracking</h3>
-                            <p class="item__info item__info--card">
-                                Track and save your medical history and health data
-                            </p>
-                        </div>
-                    </article>
-                </div>
-                <a class="btn" href="#">Learn more</a>
-                <img class="decor-bg-left" src="./assets/images/png/decor-background-01.png" alt="decor background" aria-hidden="true">
-            </div>
-                <img class="decor-dots--services" src="./assets/images/png/decor-dots.png" alt="decor dots" aria-hidden="true">
-        </section>
-
-        <section class="main-grid__section section-grid section-height mobile-padding decor--nooverflow ">
-            <div class="section-grid__container section-container">
-                <div class="article-container">
-                    <div class="image-wrapper">
-                        <img class="image" src="./assets/images/png/illustration-02.png" alt="Healthcare image 1" aria-hidden="true" />
+                    <div class="article-container--services margin-large">
+                        <article class="article-item--services item__box">
+                            <div class="item__image-wraper">
+                                <img src="./assets/images/png/ico-01-search-doctor.png" alt="Search doctor icon" aria-hidden="true" />
+                            </div>
+                            <div class="item__info-wraper">
+                                <h3 class="heading-medium">Search doctor</h3>
+                                <p class="item__info item__info--card">
+                                    Choose your doctor from thousands of specialist, general, and
+                                    trusted hospitals
+                                </p>
+                            </div>
+                        </article>
+                        <article class="article-item--services item__box">
+                            <div class="item__image-wraper">
+                                <img src="./assets/images/png/ico-02-online-pharmacy.png" alt="Online pharmacy icon" aria-hidden="true" />
+                            </div>
+                            <div class="item__info-wraper">
+                                <h3 class="heading-medium">Online pharmacy</h3>
+                                <p class="item__info item__info--card">
+                                    Buy your medicines with our mobile application with a simple
+                                    delivery system
+                                </p>
+                            </div>
+                        </article>
+                        <article class="article-item--services item__box">
+                            <div class="item__image-wraper">
+                                <img src="./assets/images/png/ico-03-consultation.png" alt="Consultation icon" aria-hidden="true" />
+                            </div>
+                            <div class="item__info-wraper">
+                                <h3 class="heading-medium">Consultation</h3>
+                                <p class="item__info item__info--card">
+                                    Free consultation with our trusted doctors and get the best
+                                    recommendations
+                                </p>
+                            </div>
+                        </article>
+                        <article class="article-item--services item__box">
+                            <div class="item__image-wraper">
+                                <img src="./assets/images/png/ico-04-details-info.png" alt="Details info icon" aria-hidden="true" />
+                            </div>
+                            <div class="item__info-wraper">
+                                <h3 class="heading-medium">Details info</h3>
+                                <p class="item__info item__info--card">
+                                    Free consultation with our trusted doctors and get the best
+                                    recommendations
+                                </p>
+                            </div>
+                        </article>
+                        <article class="article-item--services item__box">
+                            <div class="item__image-wraper">
+                                <img src="./assets/images/png/ico-05-emergency-care.png" alt="Emergency care icon" aria-hidden="true" />
+                            </div>
+                            <div class="item__info-wraper">
+                                <h3 class="heading-medium">Emergency care</h3>
+                                <p class="item__info item__info--card">
+                                    You can get 24/7 urgent care for yourself or your children and
+                                    your lovely family
+                                </p>
+                            </div>
+                        </article>
+                        <article class="article-item--services item__box">
+                            <div class="item__image-wraper">
+                                <img src="./assets/images/png/ico-06-tracking.png" alt="Tracking icon" aria-hidden="true" />
+                            </div>
+                            <div class="item__info-wraper">
+                                <h3 class="heading-medium">Tracking</h3>
+                                <p class="item__info item__info--card">
+                                    Track and save your medical history and health data
+                                </p>
+                            </div>
+                        </article>
                     </div>
-                    <article class="article--section">
-                        <h2 class="
+                    <a class="btn" href="#">Learn more</a>
+                    <img class="decor-bg-left" src="./assets/images/png/decor-background-01.png" alt="decor background" aria-hidden="true">
+                </div>
+                    <img class="decor-dots--services" src="./assets/images/png/decor-dots.png" alt="decor dots" aria-hidden="true">
+            </section>
+
+            <section class="main-grid__section section-grid section-height mobile-padding decor--nooverflow ">
+                <div class="section-grid__container section-container">
+                    <div class="article-container">
+                        <div class="image-wrapper">
+                            <img class="image" src="./assets/images/png/illustration-02.png" alt="illustration 2" aria-hidden="true" />
+                        </div>
+                        <article class="article-item--section">
+                            <h2 class="
+                                heading-large
+                                heading-bold
+                                heading-bar
+                                heading-bar--dark
+                                heading-bar--left
+                                heading-short
+                            ">
+                                Leading healthcare providers
+                            </h2>
+                            <p class="item__info item__info--section">
+                                Trafalgar provides progressive, and affordable healthcare,
+                                accessible on mobile and online for everyone. To us, it's not just
+                                work. We take pride in the solutions we deliver
+                            </p>
+                            <a class="btn" href="#">Consult today</a>
+                        </article>
+                    </div>
+                </div>
+                <img class="decor-dots--section" src="./assets/images/png/decor-dots.png" alt="decor dots" aria-hidden="true">
+
+            </section>
+
+            <section class="main-grid__section section-grid section-height mobile-padding">
+                <div class="section-grid__container section-container">
+                    <div class="article-container">
+                        <article class="article-item--section">
+                            <h2 class="
                             heading-large
                             heading-bold
                             heading-bar
                             heading-bar--dark
                             heading-bar--left
                             heading-short
-                        ">
-                            Leading healthcare providers
+                            ">
+                                Download our mobile apps
+                            </h2>
+                            <p class="item__info item__info--section">
+                                Our dedicated patient engagement app and web portal allow you to
+                                access information instantaneously (no tedeous form, long calls,
+                                or administrative hassle) and securely.
+                            </p>
+                            <a class="btn" href="/">Download</a>
+                        </article>
+                        <div class="image-wrapper">
+                            <img class="image" src="./assets/images/png/illustration-03.png" alt="illustration 3" aria-hidden="true" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="main-grid__section section-grid section-height mobile-padding"> 
+                <div class="section-grid__container section-container--testimonials section-padding">
+                    
+                    <div class="testimonials decor">
+                        <img class="decor-dots--testimonials-left" src="./assets/images/png/decor-dots.png" alt="decor dots" aria-hidden="true">
+                        <div class="decor-dots--testimonials-right">
+                            <img src="./assets/images/png/decor-dots.png" alt="decor dots" aria-hidden="true">
+                        </div>
+                        <h2 class="testimonials__header heading-large heading-bar heading-bar--center heading-bar--light">
+                            What our customer are saying
                         </h2>
-                        <p class="item__info item__info--section">
-                            Trafalgar provides progressive, and affordable healthcare,
-                            accessible on mobile and online for everyone. To us, it's not just
-                            work. We take pride in the solutions we deliver
-                        </p>
-                        <a class="btn" href="#">Consult today</a>
-                    </article>
+                        <div id="testimonials" class="carousel">
+                            <article id="testimonials-art-01" class="article-item--testimonials carousel__item carousel__item--active">
+                                <div class="testimonials__info">
+                                    <img  class="testimonials__img" src="./assets/images/jpg/avatar-01.jpg" alt="avatar" />
+                                    <div class="testimonials__personal">
+                                        <p class="testimonials__name">Edward Newgate</p>
+                                        <p class="testimonials__footer">Founder Circle</p>
+                                    </div>
+                                </div>
+                                <blockquote class="testimonials__blockquote">
+                                    <p class="testimonials__quote">Our dedicated patient engagement app and web portal allow you to
+                                    access information instantaneously (no tedeous form, long calls, or
+                                    administrative hassle) and securely</p>
+                                </blockquote>
+                            </article>
+                            <article id="testimonials-art-02" class="article-item--testimonials carousel__item carousel__item--next">
+                                <div class="testimonials__info">
+                                    <img  class="testimonials__img" src="./assets/images/jpg/avatar-02.jpg" alt="avatar" />
+                                    <div class="testimonials__personal">
+                                        <p class="testimonials__name">Alisa Mazer</p>
+                                        <p class="testimonials__footer">Founder Circle</p>
+                                    </div>
+                                </div>
+                                <blockquote class="testimonials__blockquote">
+                                    <p class="testimonials__quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                        Tempora possimus esse facilis, excepturi nisi saepe quis adipisci illum beatae nesciunt 
+                                        odio reiciendis hic cumque autem totam architecto recusandae quod! Itaque!</p>
+                                </blockquote>
+                            </article>
+                            <article id="testimonials-art-03" class="article-item--testimonials carousel__item carousel__item--next">
+                                <div class="testimonials__info">
+                                    <img  class="testimonials__img" src="./assets/images/jpg/avatar-03.jpg" alt="avatar" />
+                                    <div class="testimonials__personal">
+                                        <p class="testimonials__name">Thomas Bergsen</p>
+                                        <p class="testimonials__footer">Founder Circle</p>
+                                    </div>
+                                </div>
+                                <blockquote class="testimonials__blockquote">
+                                    <p class="testimonials__quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                                        Debitis ut doloremque ipsam dicta deleniti repellat quam aspernatur aperiam a, 
+                                        nam quae saepe impedit quisquam! Earum.</p>
+                                </blockquote>
+                            </article>
+                            <article id="testimonials-art-04" class="article-item--testimonials carousel__item carousel__item--next">
+                                <div class="testimonials__info">
+                                    <img  class="testimonials__img" src="./assets/images/jpg/avatar-04.jpg" alt="avatar" />
+                                    <div class="testimonials__personal">
+                                        <p class="testimonials__name">Anastasia Mensen</p>
+                                        <p class="testimonials__footer">Founder Circle</p>
+                                    </div>
+                                </div>
+                                <blockquote class="testimonials__blockquote">
+                                    <p class="testimonials__quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                        Amet, optio velit recusandae officia voluptates distinctio expedita soluta, saepe doloremque, 
+                                        blanditiis necessitatibus nulla quia! Pariatur vitae repellendus eos.</p>
+                                </blockquote>
+                            </article>
+                        </div>
+                    </div>
+                    
+                    <div class="pagination-container">
+                        <div class="pagination">
+                            <button id="carousel__btn--previous" class="pagination-arrow-btn" type="button">
+                                <img src="./assets/images/svg/arrow-left.svg" alt="arrow left" />
+                            </button>
+                            <div class="pagination-dots">
+                                <button id="carousel__dot-btn-01" value="01" class="pagination-dot-btn pagination-dot-btn--active" type="button"><img src="./assets/images/svg/dot.svg" alt="dot"></button>
+                                <button id="carousel__dot-btn-02" value="02" class="pagination-dot-btn" type="button"><img src="./assets/images/svg/dot.svg" alt="dot"></button>
+                                <button id="carousel__dot-btn-03" value="03" class="pagination-dot-btn" type="button"><img src="./assets/images/svg/dot.svg" alt="dot"></button>
+                                <button id="carousel__dot-btn-04" value="04" class="pagination-dot-btn" type="button"><img src="./assets/images/svg/dot.svg" alt="dot"></button>
+                            </div>
+                            <button id="carousel__btn--next" class="pagination-arrow-btn">
+                                <img src="./assets/images/svg/arrow-right.svg" alt="arrow right" />
+                            </button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <img class="decor-dots--section" src="./assets/images/png/decor-dots.png" alt="decor dots" aria-hidden="true">
+            </section>
 
-        </section>
-
-        <section class="main-grid__section section-grid section-height mobile-padding">
-            <div class="section-grid__container section-container">
-            <div class="article-container">
-                <article class="article--section">
-                    <h2 class="
-                    heading-large
-                    heading-bold
-                    heading-bar
-                    heading-bar--dark
-                    heading-bar--left
-                    heading-short
-                    ">
-                        Download our mobile apps
+            <section class="main-grid__section section-grid section-height mobile-padding decor--nooverflow ">
+                <div class="section-grid__container section-container--center section-padding">
+                    
+                    <img class="decor-dots--articles-bottom" src="./assets/images/png/decor-dots.png" alt="decor dots" aria-hidden="true">
+                    <h2 class="heading-large heading-bold heading-bar heading-bar--dark heading-bar--center">
+                        Check our latest article
                     </h2>
-                    <p class="item__info item__info--section">
-                        Our dedicated patient engagement app and web portal allow you to
-                        access information instantaneously (no tedeous form, long calls,
-                        or administrative hassle) and securely.
+                    <div class="article-container--articles margin-large decor">
+                        <img class="decor-dots--articles-top"src="./assets/images/png/decor-dots.png" alt="decor dots" aria-hidden="true">
+                        <article class="article-item--articles">
+                            <img class="item__image" src="./assets/images/png/image-1.png" alt="article image 1" />
+                            <div class="item__box item__box--articles">
+                                <h3 class="heading-medium margin-small">
+                                    Disease detection, check up in the laboratory
+                                </h3>
+                                <p class="item__info item__info--card margin-small">
+                                    In this case, the role of the health laboratory is very
+                                    important to do a disease detection...
+                                </p>
+                                <div>
+                                    <a class="item__link" href="">Read more
+                                        <img class="link__arrow" src="./assets/images/svg/arrow-right.svg" alt="arrow right" />
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="article-item--articles">
+                            <img class="item__image" src="./assets/images/png/image-2.png" alt="article image 2" />
+                            <div class="item__box item__box--articles">
+                                <h3 class="heading-medium margin-small">
+                                    Herbal medicines that are safe for consumption
+                                </h3>
+                                <p class="item__info item__info--card margin-small">
+                                    Herbal medicine is very widely used at this time because of its
+                                    very good for your health...
+                                </p>
+                                <div>
+                                    <a class="item__link" href="">Read more
+                                        <img class="link__arrow" src="./assets/images/svg/arrow-right.svg" alt="arrow right" />
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="article-item--articles">
+                            <img class="item__image" src="./assets/images/png/image-3.png" alt="article image 3" />
+                            <div class="item__box item__box--articles">
+                                <h3 class="heading-medium margin-small">
+                                    Natural care for healthy facial skin
+                                </h3>
+                                <p class="item__info item__info--card margin-small">
+                                    A healthy lifestyle should start from now and also for your skin
+                                    health. There are some...
+                                </p>
+                                <div>
+                                    <a class="item__link" href="">Read more
+                                        <img class="link__arrow" src="./assets/images/svg/arrow-right.svg" alt="arrow right" />
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <a class="btn" href="">View all</a>
+                </div>
+                <img class="decor-bg-right" src="./assets/images/png/decor-background-02.png" alt="decor background" aria-hidden="true">
+            </section>
+        </main>
+
+        <footer class="footer-grid footer-section mobile-padding decor--nooverflow ">
+            <img class="decor-dots--footer" src="./assets/images/png/decor-dots.png" alt="decor dots" aria-hidden="true">
+            <div class="footer-grid__info footer-info__container">
+                <!-- Logo V 2.0 -->
+                <a class="logo logo--footer" href="/" aria-label="Trafalgar logo">
+                    <span class="logo__icon logo__icon--light" aria-hidden="true">T</span>
+                    <span class="logo__text logo__text--light" aria-hidden="true">Trafalgar</span>
+                </a>
+                <div class="item__info--footer">
+                    <p class="footer-info__trafalgar margin-footer-nav">
+                        Trafalgar provides progressive, and affordable healthcare, accessible
+                        on mobile and online for everyone
                     </p>
-                    <a class="btn" href="/">Download</a>
-                </article>
-                <div class="image-wrapper">
-                    <img class="image" src="./assets/images/png/illustration-03.png" alt="Healthcare image 2" aria-hidden="true" />
+                    <p class="footer-info__rights margin-none">&copy;Trafalgar PTY LTD 2020. All rights reserved</p>
                 </div>
-                <!-- assuming redirection to App Store / Google Play  -->
             </div>
-            </div>
-        </section>
 
-        <section class="main-grid__section section-grid section-height mobile-padding"> 
-            <div class="section-grid__container section-container--testimonials section-padding">
-                
-                <div class="testimonials decor">
-                    <img class="decor-dots--testimonials-left" src="./assets/images/png/decor-dots.png" alt="decor dots" aria-hidden="true">
-                    <div class="decor-dots--testimonials-right">
-                        <img src="./assets/images/png/decor-dots.png" alt="decor dots" aria-hidden="true">
-                    </div>
-                    <h2 class="testimonials__header heading-large heading-bar heading-bar--center heading-bar--light">
-                        What our customer are saying
-                    </h2>
-                    <div id="testimonials" class="carousel">
-                        <article id="testimonials-art-01" class="article carousel__item carousel__item--active">
-                            <div class="testimonials__info">
-                                <img  class="testimonials__img" src="./assets/images/jpg/avatar-01.jpg" alt="avatar" />
-                                <div class="testimonials__personal">
-                                    <p class="testimonials__name">Edward Newgate</p>
-                                    <p class="testimonials__footer">Founder Circle</p>
-                                </div>
-                            </div>
-                            <blockquote class="testimonials__blockquote">
-                                <p class="testimonials__quote">Our dedicated patient engagement app and web portal allow you to
-                                access information instantaneously (no tedeous form, long calls, or
-                                administrative hassle) and securely</p>
-                            </blockquote>
-                        </article>
-                        <article id="testimonials-art-02" class="article carousel__item carousel__item--next">
-                            <div class="testimonials__info">
-                                <img  class="testimonials__img" src="./assets/images/jpg/avatar-02.jpg" alt="avatar" />
-                                <div class="testimonials__personal">
-                                    <p class="testimonials__name">Alisa Mazer</p>
-                                    <p class="testimonials__footer">Founder Circle</p>
-                                </div>
-                            </div>
-                            <blockquote class="testimonials__blockquote">
-                                <p class="testimonials__quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Tempora possimus esse facilis, excepturi nisi saepe quis adipisci illum beatae nesciunt 
-                                    odio reiciendis hic cumque autem totam architecto recusandae quod! Itaque!</p>
-                            </blockquote>
-                        </article>
-                        <article id="testimonials-art-03" class="article carousel__item carousel__item--next">
-                            <div class="testimonials__info">
-                                <img  class="testimonials__img" src="./assets/images/jpg/avatar-03.jpg" alt="avatar" />
-                                <div class="testimonials__personal">
-                                    <p class="testimonials__name">Thomas Bergsen</p>
-                                    <p class="testimonials__footer">Founder Circle</p>
-                                </div>
-                            </div>
-                            <blockquote class="testimonials__blockquote">
-                                <p class="testimonials__quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                                    Debitis ut doloremque ipsam dicta deleniti repellat quam aspernatur aperiam a, 
-                                    nam quae saepe impedit quisquam! Earum.</p>
-                            </blockquote>
-                        </article>
-                        <article id="testimonials-art-04" class="article carousel__item carousel__item--next">
-                            <div class="testimonials__info">
-                                <img  class="testimonials__img" src="./assets/images/jpg/avatar-04.jpg" alt="avatar" />
-                                <div class="testimonials__personal">
-                                    <p class="testimonials__name">Anastasia Mensen</p>
-                                    <p class="testimonials__footer">Founder Circle</p>
-                                </div>
-                            </div>
-                            <blockquote class="testimonials__blockquote">
-                                <p class="testimonials__quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Amet, optio velit recusandae officia voluptates distinctio expedita soluta, saepe doloremque, 
-                                    blanditiis necessitatibus nulla quia! Pariatur vitae repellendus eos.</p>
-                            </blockquote>
-                        </article>
-                    </div>
-                </div>
-                
-                <div class="pagination-container">
-                    <div class="pagination">
-                        <button id="carousel__btn--previous" class="pagination-arrow-btn" type="button">
-                            <img src="./assets/images/svg/arrow-left.svg" alt="arrow left" />
+            <nav id="footer-navigation" class="footer-grid__nav">
+                <ul class="footer-navigation__menu nav-list">
+                    <li>
+                        <button id="footer-btn-01" class="footer-navigation__btn">
+                            <h3 class="heading-footer heading-bold margin-none">Company</h3>
                         </button>
-                        <div class="pagination-dots">
-                            <button id="carousel__dot-btn-01" value="01" class="pagination-dot-btn pagination-dot-btn--active" type="button"><img src="./assets/images/svg/dot.svg" alt="dot"></button>
-                            <button id="carousel__dot-btn-02" value="02" class="pagination-dot-btn" type="button"><img src="./assets/images/svg/dot.svg" alt="dot"></button>
-                            <button id="carousel__dot-btn-03" value="03" class="pagination-dot-btn" type="button"><img src="./assets/images/svg/dot.svg" alt="dot"></button>
-                            <button id="carousel__dot-btn-04" value="04" class="pagination-dot-btn" type="button"><img src="./assets/images/svg/dot.svg" alt="dot"></button>
-                        </div>
-                        <button id="carousel__btn--next" class="pagination-arrow-btn">
-                            <img src="./assets/images/svg/arrow-right.svg" alt="arrow right" />
+                        <ul class="footer-navigation__list nav-list ">
+                            <li>
+                                <a class="footer-navigation__link" href="" data-title="About">About</a>
+                            </li>
+                            <li>
+                                <a class="footer-navigation__link" href="" data-title="Testimonials">Testimonials</a>
+                            </li>
+                            <li>
+                                <a class="footer-navigation__link" href="" data-title="Find a doctor">Find a doctor</a>
+                            </li>
+                            <li>
+                                <a class="footer-navigation__link" href="" data-title="Apps">Apps</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button id="footer-btn-02" class="footer-navigation__btn">
+                            <h3 class="heading-footer heading-bold margin-none">Region</h3>
                         </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="main-grid__section section-grid section-height mobile-padding decor--nooverflow ">
-            <div class="section-grid__container section-container--center section-padding">
-                
-                <img class="decor-dots--articles-bottom" src="./assets/images/png/decor-dots.png" alt="decor dots" aria-hidden="true">
-                <h2 class="heading-large heading-bold heading-bar heading-bar--dark heading-bar--center">
-                    Check our latest article
-                </h2>
-                <div class="article margin-large decor">
-                    <img class="decor-dots--articles-top"src="./assets/images/png/decor-dots.png" alt="decor dots" aria-hidden="true">
-                    <article class="article__item">
-                        <img class="item__image" src="./assets/images/png/image-1.png" alt="" />
-                        <div class="item__box item__box--articles">
-                            <h3 class="heading-medium margin-small">
-                                Disease detection, check up in the laboratory
-                            </h3>
-                            <p class="item__info item__info--card margin-small">
-                                In this case, the role of the health laboratory is very
-                                important to do a disease detection...
-                            </p>
-                            <div>
-                                <a class="item__link" href="">Read more
-                                    <img class="link__arrow" src="./assets/images/svg/arrow-right.svg" alt="arrow right" />
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="article__item">
-                        <img class="item__image" src="./assets/images/png/image-2.png" alt="" />
-                        <div class="item__box item__box--articles">
-                            <h3 class="heading-medium margin-small">
-                                Herbal medicines that are safe for consumption
-                            </h3>
-                            <p class="item__info item__info--card margin-small">
-                                Herbal medicine is very widely used at this time because of its
-                                very good for your health...
-                            </p>
-                            <div>
-                                <a class="item__link" href="">Read more
-                                    <img class="link__arrow" src="./assets/images/svg/arrow-right.svg" alt="arrow right" />
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="article__item">
-                        <img class="item__image" src="./assets/images/png/image-3.png" alt="" />
-                        <div class="item__box item__box--articles">
-                            <h3 class="heading-medium margin-small">
-                                Natural care for healthy facial skin
-                            </h3>
-                            <p class="item__info item__info--card margin-small">
-                                A healthy lifestyle should start from now and also for your skin
-                                health. There are some...
-                            </p>
-                            <div>
-                                <a class="item__link" href="">Read more
-                                    <img class="link__arrow" src="./assets/images/svg/arrow-right.svg" alt="arrow right" />
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <a class="btn" href="">View all</a>
-            </div>
-            <img class="decor-bg-right" src="./assets/images/png/decor-background-02.png" alt="decor background" aria-hidden="true">
-        </section>
-    </main>
-
-    <footer class="footer-grid footer-section mobile-padding decor--nooverflow ">
-        <!-- <img class="HIDE-IMG" src="./assets/images/Vector.svg" alt=""> -->
-        <img class="decor-dots--footer" src="./assets/images/png/decor-dots.png" alt="decor dots" aria-hidden="true">
-        <div class="footer-grid__info footer-info__container">
-            <!-- V 2.0 -->
-            <a class="logo logo--footer" href="/" aria-label="Trafalgar logo">
-                <span class="logo__icon logo__icon--light" aria-hidden="true">T</span>
-                <span class="logo__text logo__text--light" aria-hidden="true">Trafalgar</span>
-            </a>
-            <div class="item__info--footer">
-                <p class="footer-info__trafalgar margin-footer-nav">
-                    Trafalgar provides progressive, and affordable healthcare, accessible
-                    on mobile and online for everyone
-                </p>
-                <p class="footer-info__rights margin-none">&copy;Trafalgar PTY LTD 2020. All rights reserved</p>
-            </div>
-        </div>
-
-        <nav id="footer-navigation" class="footer-grid__nav">
-            <ul class="footer-navigation__menu nav-list">
-                <li>
-                    <button id="footer-btn-01" class="footer-navigation__btn">
-                        <h3 class="heading-footer heading-bold margin-none">Company</h3>
-                    </button>
-                    <ul class="footer-navigation__list nav-list ">
-                        <li>
-                            <a class="footer-navigation__link" href="" data-title="About">About</a>
-                        </li>
-                        <li>
-                            <a class="footer-navigation__link" href="" data-title="Testimonials">Testimonials</a>
-                        </li>
-                        <li>
-                            <a class="footer-navigation__link" href="" data-title="Find a doctor">Find a doctor</a>
-                        </li>
-                        <li>
-                            <a class="footer-navigation__link" href="" data-title="Apps">Apps</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <button id="footer-btn-02" class="footer-navigation__btn">
-                        <h3 class="heading-footer heading-bold margin-none">Region</h3>
-                    </button>
-                    <ul class="footer-navigation__list nav-list">
-                        <li>
-                            <a class="footer-navigation__link" href="" data-title="Indonesia">Indonesia</a>
-                        </li>
-                        <li>
-                            <a class="footer-navigation__link" href="" data-title="Singapore">Singapore</a>
-                        </li>
-                        <li>
-                            <a class="footer-navigation__link" href="" data-title="Hongkong">Hongkong</a>
-                        </li>
-                        <li>
-                            <a class="footer-navigation__link" href="" data-title="Canada">Canada</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <button id="footer-btn-03" class="footer-navigation__btn">
-                        <h3 class="heading-footer heading-bold margin-none">Help</h3>
-                    </button>
-                    <ul class="footer-navigation__list nav-list">
-                        <li>
-                            <a class="footer-navigation__link" href="" data-title="Help center">Help center</a>
-                        </li>
-                        <li>
-                            <a class="footer-navigation__link" href="" data-title="Contact support">Contact support</a>
-                        </li>
-                        <li>
-                            <a class="footer-navigation__link" href=""  data-title="Instructions">Instructions</a>
-                        </li>
-                        <li>
-                            <a class="footer-navigation__link" href="" data-title="How it works">How it works</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </footer>
-    <script src="./assets/js/main.js"></script>
-</body>
+                        <ul class="footer-navigation__list nav-list">
+                            <li>
+                                <a class="footer-navigation__link" href="" data-title="Indonesia">Indonesia</a>
+                            </li>
+                            <li>
+                                <a class="footer-navigation__link" href="" data-title="Singapore">Singapore</a>
+                            </li>
+                            <li>
+                                <a class="footer-navigation__link" href="" data-title="Hongkong">Hongkong</a>
+                            </li>
+                            <li>
+                                <a class="footer-navigation__link" href="" data-title="Canada">Canada</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button id="footer-btn-03" class="footer-navigation__btn">
+                            <h3 class="heading-footer heading-bold margin-none">Help</h3>
+                        </button>
+                        <ul class="footer-navigation__list nav-list">
+                            <li>
+                                <a class="footer-navigation__link" href="" data-title="Help center">Help center</a>
+                            </li>
+                            <li>
+                                <a class="footer-navigation__link" href="" data-title="Contact support">Contact support</a>
+                            </li>
+                            <li>
+                                <a class="footer-navigation__link" href=""  data-title="Instructions">Instructions</a>
+                            </li>
+                            <li>
+                                <a class="footer-navigation__link" href="" data-title="How it works">How it works</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+        <script src="./assets/js/main.js"></script>
+    </body>
 </html>
