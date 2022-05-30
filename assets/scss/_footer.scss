@@ -5,6 +5,9 @@
 	font-weight: var(--f-weight-light);
 	text-align: left;
 
+	@media (min-width: 481px) {
+		padding: var(--p-mobile) 10vw;
+	}
 	@media (hover) {
 		padding: 6.8125rem 0;
 		text-align: unset;
