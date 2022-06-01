@@ -1,15 +1,16 @@
 'use strict'
 
+const TRUE_VALUE = 'true';
+const FALSE_VALUE = 'false'
+const ACTIVE_VALUE = 'active';
+const CLICK_VALUE = 'click';
+const NOSCROLL_VALUE = 'noscroll';
+const ARIA_EXPANDED_ATTRIBUTE = 'aria-expanded';
+
 const PAGE_ID = 'page';
 const NAVBAR_NAVIGATION_ID = 'navbar-navigation';
 const NAVBAR_MOBILE__BUTTON_ID = 'navbar-mobile__button';
 const NAVIGATION_ELEMENT_IDS = [PAGE_ID, NAVBAR_NAVIGATION_ID, NAVBAR_MOBILE__BUTTON_ID];
-const ARIA_EXPANDED = 'aria-expanded';
-const NOSCROLL_VALUE = 'noscroll';
-const CLICK_VALUE = 'click';
-const ACTIVE_VALUE = 'active';
-const TRUE_VALUE = 'true';
-const FALSE_VALUE = 'false'
 
 const CAROUSEL_BTN_NEXT_ID = 'carousel__btn--next';
 const CAROUSEL_BTN_PREVIOUS_ID = 'carousel__btn--previous';
@@ -83,7 +84,7 @@ function toggleClassActive(element) {
 }
 
 function toggleAriaExpanded(element) {
-    element.setAttribute(ARIA_EXPANDED, (element.getAttribute(ARIA_EXPANDED) === TRUE_VALUE) ? FALSE_VALUE : TRUE_VALUE);
+    element.setAttribute(ARIA_EXPANDED_ATTRIBUTE, (element.getAttribute(ARIA_EXPANDED_ATTRIBUTE) === TRUE_VALUE) ? FALSE_VALUE : TRUE_VALUE);
 }
 
 function handleMobileNav() {
@@ -278,7 +279,7 @@ function handleFooterNav() {
     }
 
     Array.from(getElementsByClass(FOOTER_NAVIGATION_BTN_CLASS)).forEach((element) => {
-        if (element.getAttribute(ARIA_EXPANDED) === TRUE_VALUE) {
+        if (element.getAttribute(ARIA_EXPANDED_ATTRIBUTE) === TRUE_VALUE) {
             toggleAriaExpanded(element);
         } else if (element === this) {
             toggleAriaExpanded(element);
