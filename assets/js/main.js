@@ -5,6 +5,11 @@ const NAVBAR_NAVIGATION_ID = 'navbar-navigation';
 const NAVBAR_MOBILE__BUTTON_ID = 'navbar-mobile__button';
 const NAVIGATION_ELEMENT_IDS = [PAGE_ID, NAVBAR_NAVIGATION_ID, NAVBAR_MOBILE__BUTTON_ID];
 const ARIA_EXPANDED = 'aria-expanded';
+const NOSCROLL_VALUE = 'noscroll';
+const CLICK_VALUE = 'click';
+const ACTIVE_VALUE = 'active';
+const TRUE_VALUE = 'true';
+const FALSE_VALUE = 'false'
 
 const CAROUSEL_BTN_NEXT_ID = 'carousel__btn--next';
 const CAROUSEL_BTN_PREVIOUS_ID = 'carousel__btn--previous';
@@ -70,15 +75,15 @@ function getCarouselItems() {
 }
 
 function toggleScrollLock(element) {
-    element.classList.toggle('noscroll');
+    element.classList.toggle(NOSCROLL_VALUE);
 }
 
 function toggleClassActive(element) {
-    element.classList.toggle('active');
+    element.classList.toggle(ACTIVE_VALUE);
 }
 
 function toggleAriaExpanded(element) {
-    element.setAttribute(ARIA_EXPANDED, (element.getAttribute(ARIA_EXPANDED) === 'true') ? 'false' : 'true');
+    element.setAttribute(ARIA_EXPANDED, (element.getAttribute(ARIA_EXPANDED) === TRUE_VALUE) ? FALSE_VALUE : TRUE_VALUE);
     // if (element.getAttribute(ARIA_EXPANDED) === 'true') {
     //     element.setAttribute(ARIA_EXPANDED, 'false');
     // } else {
@@ -195,14 +200,6 @@ function handleCarouselMainBtn(e) {
     setCarouselDotBtnActiveStatus();
 }
 
-getElement(NAVBAR_MOBILE__BUTTON_ID).addEventListener('click', handleMobileNav);
-
-CAROUSEL_BTN_IDS.forEach((elementId) => {
-    const element = getElement(elementId);
-
-    element.addEventListener('click', handleCarouselMainBtn);
-});
-
 function getParsedElementValue(element) {
     return parseInt(element.value);
 }
@@ -264,12 +261,6 @@ function handleCarouselDotBtn(e) {
     timerIds.push(timerId);
 }
 
-CAROUSEL_DOT_BTN_IDS.forEach((elementId) => {
-    const element = getElement(elementId);
-
-    element.addEventListener('click', handleCarouselDotBtn);
-});
-
 function toggleClassOnElement(element, className) {
     element.classList.toggle(className);
 }
@@ -292,7 +283,7 @@ function handleFooterNav() {
     }
 
     Array.from(getElementsByClass(FOOTER_NAVIGATION_BTN_CLASS)).forEach((element) => {
-        if (element.getAttribute(ARIA_EXPANDED) === 'true') {
+        if (element.getAttribute(ARIA_EXPANDED) === TRUE_VALUE) {
             toggleAriaExpanded(element);
         } else if (element === this) {
             toggleAriaExpanded(element);
@@ -300,6 +291,20 @@ function handleFooterNav() {
     });
 }
 
+getElement(NAVBAR_MOBILE__BUTTON_ID).addEventListener(CLICK_VALUE, handleMobileNav);
+
+CAROUSEL_BTN_IDS.forEach((elementId) => {
+    const element = getElement(elementId);
+
+    element.addEventListener(CLICK_VALUE, handleCarouselMainBtn);
+});
+
+CAROUSEL_DOT_BTN_IDS.forEach((elementId) => {
+    const element = getElement(elementId);
+
+    element.addEventListener(CLICK_VALUE, handleCarouselDotBtn);
+});
+
 Array.from(getElementsByClass(FOOTER_NAVIGATION_BTN_CLASS)).forEach((element) => {
-    element.addEventListener('click', handleFooterNav);
+    element.addEventListener(CLICK_VALUE, handleFooterNav);
 });
