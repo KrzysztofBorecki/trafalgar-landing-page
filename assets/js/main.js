@@ -78,7 +78,7 @@ function toggleClassActive(element) {
 }
 
 function toggleAriaExpanded(element) {
-    if (element.getAttribute(ARIA_EXPANDED)) {
+    if (element.getAttribute(ARIA_EXPANDED) === 'true') {
         element.setAttribute(ARIA_EXPANDED, 'false');
     } else {
         element.setAttribute(ARIA_EXPANDED, 'true'); 
@@ -289,6 +289,14 @@ function handleFooterNav() {
         toggleClassOnElement(this, FOOTER_NAVIGATION_BTN_ACTIVE_CLASS);
         toggleClassOnElement(this.nextElementSibling, FOOTER_NAVIGATION_LIST_UNFOLDED_CLASS);
     }
+
+    Array.from(getElementsByClass(FOOTER_NAVIGATION_BTN_CLASS)).forEach((element) => {
+        if (element.getAttribute(ARIA_EXPANDED) === 'true') {
+            toggleAriaExpanded(element);
+        } else if (element === this) {
+            toggleAriaExpanded(element);
+        }
+    });
 }
 
 Array.from(getElementsByClass(FOOTER_NAVIGATION_BTN_CLASS)).forEach((element) => {

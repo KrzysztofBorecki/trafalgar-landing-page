@@ -24,7 +24,7 @@
                         <span class="logo__icon" aria-hidden="true">T</span>
                         <span class="logo__text" aria-hidden="true">Trafalgar</span>
                     </a>
-                    <button id="navbar-mobile__button" class="navbar-mobile__button" aria-controls="navbar-navigation" aria-expanded="true">
+                    <button id="navbar-mobile__button" class="navbar-mobile__button" aria-controls="navbar-navigation" aria-expanded="false">
                         <span></span>
                     </button> 
                 </div> 
@@ -409,10 +409,10 @@
             <nav id="footer-navigation" class="footer-grid__nav">
                 <ul class="footer-navigation__menu nav-list">
                     <li>
-                        <button id="footer-btn-01" class="footer-navigation__btn">
+                        <button id="footer-btn-01" class="footer-navigation__btn" aria-controls="footer-menu-company" aria-expanded="false">
                             <h3 class="heading-footer heading-bold margin-none">Company</h3>
                         </button>
-                        <ul class="footer-navigation__list nav-list ">
+                        <ul id="footer-menu-company" class="footer-navigation__list nav-list ">
                             <li>
                                 <a class="footer-navigation__link" href="" data-title="About">About</a>
                             </li>
@@ -428,10 +428,10 @@
                         </ul>
                     </li>
                     <li>
-                        <button id="footer-btn-02" class="footer-navigation__btn">
+                        <button id="footer-btn-02" class="footer-navigation__btn" aria-controls="footer-menu-region" aria-expanded="false">
                             <h3 class="heading-footer heading-bold margin-none">Region</h3>
                         </button>
-                        <ul class="footer-navigation__list nav-list">
+                        <ul id="footer-menu-region" class="footer-navigation__list nav-list">
                             <li>
                                 <a class="footer-navigation__link" href="" data-title="Indonesia">Indonesia</a>
                             </li>
@@ -447,10 +447,10 @@
                         </ul>
                     </li>
                     <li>
-                        <button id="footer-btn-03" class="footer-navigation__btn">
+                        <button id="footer-btn-03" class="footer-navigation__btn" aria-controls="footer-menu-help" aria-expanded="false">
                             <h3 class="heading-footer heading-bold margin-none">Help</h3>
                         </button>
-                        <ul class="footer-navigation__list nav-list">
+                        <ul id="footer-menu-help" class="footer-navigation__list nav-list">
                             <li>
                                 <a class="footer-navigation__link" href="" data-title="Help center">Help center</a>
                             </li>
