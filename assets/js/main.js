@@ -78,11 +78,12 @@ function toggleClassActive(element) {
 }
 
 function toggleAriaExpanded(element) {
-    if (element.getAttribute(ARIA_EXPANDED) === 'true') {
-        element.setAttribute(ARIA_EXPANDED, 'false');
-    } else {
-        element.setAttribute(ARIA_EXPANDED, 'true'); 
-    }
+    element.setAttribute(ARIA_EXPANDED, (element.getAttribute(ARIA_EXPANDED) === 'true') ? 'false' : 'true');
+    // if (element.getAttribute(ARIA_EXPANDED) === 'true') {
+    //     element.setAttribute(ARIA_EXPANDED, 'false');
+    // } else {
+    //     element.setAttribute(ARIA_EXPANDED, 'true'); 
+    // }
 }
 
 function handleMobileNav() {
