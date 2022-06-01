@@ -84,11 +84,6 @@ function toggleClassActive(element) {
 
 function toggleAriaExpanded(element) {
     element.setAttribute(ARIA_EXPANDED, (element.getAttribute(ARIA_EXPANDED) === TRUE_VALUE) ? FALSE_VALUE : TRUE_VALUE);
-    // if (element.getAttribute(ARIA_EXPANDED) === 'true') {
-    //     element.setAttribute(ARIA_EXPANDED, 'false');
-    // } else {
-    //     element.setAttribute(ARIA_EXPANDED, 'true'); 
-    // }
 }
 
 function handleMobileNav() {
