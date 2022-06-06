@@ -20,7 +20,7 @@
 	@media (hover) {
 		margin: 0 auto;
 
-		@media screen and (min-width: 1170px) {
+		@media (min-width: 1170px) {
 			margin: 0 0;
 		}
 	}
@@ -35,7 +35,7 @@
 			max-width: 60ch;
 			margin: 0 0 29px 0;
 
-			@media screen and (min-width: 1170px) {
+			@media (min-width: 1170px) {
 				max-width: 35ch;
 			}
 		}

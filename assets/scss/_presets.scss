@@ -2,6 +2,7 @@
 	&-large {
 		margin-top: 0;
 		margin-bottom: 20px;
+
 		@media (hover) {
 			margin-bottom: 70px;
 		}
@@ -9,6 +10,7 @@
 	&-medium {
 		margin-top: 0;
 		margin-bottom: 20px;
+
 		@media (hover) {
 			margin-bottom: 40px;
 		}
@@ -22,6 +24,7 @@
 	}
 	&-footer-nav {
 		margin: 1rem 0;
+
 		@media (hover) {
 			margin: 2rem 0;
 		}
@@ -35,6 +38,7 @@
 	&-hero {
 		margin: 1.25rem auto;
 		font-size: var(--f-size-h1-mobile);
+
 		@media (hover) {
 			margin: 1.5625rem 0;
 			font-size: var(--f-size-h1);
@@ -43,6 +47,7 @@
 	&-large {
 		margin: 1.5625rem auto;
 		font-size: var(--f-size-h2-mobile);
+		
 		@media (hover) {
             margin: 1.5625rem 0;
 			font-size: var(--f-size-h2);
