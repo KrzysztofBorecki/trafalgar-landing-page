@@ -18,9 +18,12 @@
 
 	@media (hover) {
 		display: inline-block;
-		font-size: var(--f-size-secondary);
+		// font-size: var(--f-size-main);
 		min-width: 7.8em;
 		padding: 0 0;
+		@media (min-width: 660px) {
+			font-size: var(--f-size-secondary);
+		}
 	} 
 
 	&:hover {
