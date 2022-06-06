@@ -1,0 +1,74 @@
+.margin {
+	&-large {
+		margin-top: 0;
+		margin-bottom: 20px;
+
+		@media (hover) {
+			margin-bottom: 70px;
+		}
+	}
+	&-medium {
+		margin-top: 0;
+		margin-bottom: 20px;
+
+		@media (hover) {
+			margin-bottom: 40px;
+		}
+	}
+	&-small {
+		margin-top: 0;
+		margin-bottom: 20px;
+	}
+	&-nav-bar {
+		margin-top: 0.3em;
+	}
+	&-footer-nav {
+		margin: 1rem 0;
+
+		@media (hover) {
+			margin: 2rem 0;
+		}
+	}
+	&-none{
+		margin: 0 0;
+	}
+}
+
+.heading { 
+	&-hero {
+		margin: 1.25rem auto;
+		font-size: var(--f-size-h1-mobile);
+
+		@media (hover) {
+			margin: 1.5625rem 0;
+			font-size: var(--f-size-h1);
+		}
+	}
+	&-large {
+		margin: 1.5625rem auto;
+		font-size: var(--f-size-h2-mobile);
+		
+		@media (hover) {
+			margin: 1.5625rem 0;
+			font-size: var(--f-size-h2);
+			line-height: 3rem;
+		}
+	}
+	&-medium {
+		font-size: var(--f-size-h3);
+	}
+	&-small {
+		font-size: var(--f-size-h4);
+	}
+	&-footer {
+		font-size: var(--f-size-footer-h);
+	}
+}
+
+.heading-bold {
+	font-weight: var(--f-weight-bold);
+}
+
+.heading-short {
+	max-width: 16ch;
+}

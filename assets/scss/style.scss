@@ -1,12 +1,21 @@
 @use "./variables";
-@use "./base-styles";
-@use "./sections";
-@use "./grid";
-@use "./navigation-general";
-@use "./navbar-animation";
-@use "./navbar";
-@use "./navigation-footer";
+@use "./presets";
 @use "./logo";
 @use "./elements";
 
-@use "./DISABLE";
+@use "./page";
+@use "./image";
+@use "./sections";
+@use "./grid";
+
+@use "./navigation-animations";
+@use "./navigation-general";
+@use "./navigation-header";
+@use "./navigation-footer";
+
+@use "./articles";
+@use "./testimonials";
+@use "./pagination";
+@use "./carousel";
+
+@use "./footer";

@@ -1,0 +1,27 @@
+.carousel {
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+}
+
+.carousel__item {
+	grid-column: 1/2;
+	grid-row: 1/2;
+	// ! specifying 'transform' explicitly here is important 
+	// ! we don't want transition on opacity from .carousel__item--hidden
+	transition: transform 1000ms;
+
+	&--next {
+		transform: translateX(150%);
+	}
+	&--previous {
+		transform: translateX(-150%);
+	}
+	&--active {
+		transform: translateX(0%);
+	}
+	&--hidden {
+		opacity: 0;
+	}
+}
