@@ -1,7 +1,7 @@
 .article-container {
 	@media (min-width: 800px) {
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-evenly;
 		align-items: center;
 		width: 100%;
 		gap: 20px;
@@ -46,6 +46,9 @@
 			justify-content: center;
 			gap: 1.875rem;
 		}
+		@media (min-width: 1280px) {
+			justify-content: space-between;
+		}
 		@media (hover) {
 			display: flex;
 			flex-flow: row wrap;
@@ -75,8 +78,8 @@
 	&--section {
 		// max-width: 65ch;
 		// @media (min-width: 481px) {
-			// 	margin: 0 auto;
-			// }
+		// 	margin: 0 auto;
+		// }
 		flex-shrink: 1;
 
 		@media (hover) {

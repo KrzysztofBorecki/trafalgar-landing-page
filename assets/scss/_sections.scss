@@ -7,8 +7,10 @@
 }
 
 .section-padding {
-	padding: 0rem 1.25rem;
-
+	padding: 0 1.25rem;
+	@media (min-width: 1280px) {
+		padding: 0 var(--p-mobile-wide);
+	}
 	@media (hover) {
 		padding: 0 2rem 3rem 2rem;
 
