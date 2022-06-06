@@ -12,11 +12,15 @@
 	display: block;
 
 	@media (hover) {
-		height: var(--nav-height-desktop);
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		gap: 10px;
+		height: 100%;
+
+		@media (min-width: 660px) {		
+			height: var(--nav-height-desktop);
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 10px;
+		}
 	}
 }
 
@@ -29,9 +33,14 @@
 	align-items: center;
 
 	@media (hover) {
-		display: block;
-		height: unset;
+		display: flex;
+		height: var(--nav-height-desktop);
 		background-color: unset;
+
+		@media (min-width: 660px) {
+			display: block;
+			height: unset;
+		}
 	}
 }
 
@@ -86,10 +95,8 @@
 	&:hover span {
 		background: var(--c-text-menu-active);
 	}
-}
 
-@media (hover) {
-	.navbar-mobile__button {
+	@media (hover) {
 		display: none;
 	}
 }
@@ -98,10 +105,8 @@
 	height: 100vh;
 	padding-top: 20px;
 	background: var(--c-bg-menu); 
-}
-
-@media (hover) {
-	.navbar-navigation {
+	
+	@media (hover) {
 		height: unset;
 		padding-top: unset;
 	}
@@ -109,13 +114,15 @@
 
 .navbar-navigation__menu {
 	display: block;
-}
-
-@media (hover) {
-	.navbar-navigation__menu {
-		min-width: 450px;	
+	
+	@media (hover) {
+		min-width: 390px;	
 		display: flex;
 		justify-content: space-between;
+
+		@media (min-width: 660px) {
+			min-width: 450px;	
+		}
 	}
 }
 
@@ -130,10 +137,8 @@
 		height: 1px;
 		background: var(--c-text-menu-static);
 	}
-}
 
-@media (hover) {
-	.navbar-navigation__item {
+	@media (hover) {
 		display: inline-block;
 		font-size: 0;
 
@@ -142,6 +147,7 @@
 		}
 	}
 }
+
 
 .navbar-navigation__link, .navbar-navigation__link:visited {
 	padding: 1rem 1.25rem; 
@@ -153,26 +159,22 @@
 	color: var(--c-text-menu-static);
 
 	@media (hover) {
-		padding: 1rem 0.625rem; 
+		padding: 1rem 0.25rem; 
 		font-size: var(--f-size-main);
-
-		@media screen and (min-width: 710px) {
-			font-size: var(--f-size-secondary);
-		}
-		@media screen and (min-width: 1040px) {
-			padding: 1rem 1.25rem; 
-		}	
-	}
-}
-
-@media (hover) {
-	.navbar-navigation__link, .navbar-navigation__link:visited {
-		margin-top: 0.6em;
+		margin-top: 0em;
 		display:inline-block;
 
-		@media screen and (min-width: 710px) {
+		@media (min-width: 660px) {
+			padding: 1rem 0.625rem;
+			margin-top: 0.6em; 
+		}
+		@media (min-width: 710px) {
+			font-size: var(--f-size-secondary);
 			margin-top: 0.4em;
 		}
+		@media (min-width: 1040px) {
+			padding: 1rem 1.25rem; 
+		}	
 	}
 }
 

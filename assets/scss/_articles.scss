@@ -8,11 +8,18 @@
 	} 
 	@media (hover) {
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
 		width: 100%;
 		gap: 20px;
+		flex-flow: row wrap;
 	}
+
+	@media (hover) and (min-width: 660px) {
+		justify-content: space-between;
+		flex-flow: row nowrap;
+	}
+
 	&--hero {
 		height: 100%;
 	}
@@ -46,10 +53,9 @@
 			align-items: initial;
 			align-content: initial;
 			gap: 1.875rem;
-	
-			@media screen and (min-width: 1600px) {
-				justify-content: space-between;
-			}
+		}
+		@media (hover) and (min-width: 1600px) {
+			justify-content: space-between;
 		}
 	}
 }
@@ -97,10 +103,10 @@
 			flex: 1 1 26ch;
 			flex-flow: column;
 			margin-bottom: 0;
+		}
 			
-			@media screen and (min-width: 1100px) {
-				flex: 1 1 30ch;
-			}
+		@media (hover) and (min-width: 1100px) {
+			flex: 1 1 30ch;
 		}
 	}
 	&--testimonials {
@@ -119,10 +125,9 @@
 			align-items: initial;
 			align-content: initial;
 			gap: 1.875rem;
-	
-			@media screen and (min-width: 1600px) {
-				justify-content: space-between;
-			}
+		}
+		@media (hover) and (min-width: 1600px) {
+			justify-content: space-between;
 		}
 	}
 	&--articles {

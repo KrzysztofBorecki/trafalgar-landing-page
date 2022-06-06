@@ -16,8 +16,12 @@
 	text-align: center;
 
 	@media (hover) {
-		min-width: 660px;
+		// min-width: unset;
 		text-align: initial;
+
+		// @media (min-width: 660px) {
+		// 	min-width: 660px;
+		// }
 	}
 }
 
