@@ -1,5 +1,7 @@
 @use "./variables";
 @use "./presets";
+@use "./logo";
+@use "./elements";
 
 @use "./page";
 @use "./image";
@@ -11,12 +13,9 @@
 @use "./navigation-header";
 @use "./navigation-footer";
 
-@use "./footer";
-
 @use "./articles";
 @use "./testimonials";
 @use "./pagination";
-
-@use "./logo";
-@use "./elements";
 @use "./carousel";
+
+@use "./footer";

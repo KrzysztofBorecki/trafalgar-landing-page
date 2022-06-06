@@ -6,11 +6,8 @@
 .image-wrapper {
 	padding-bottom: 2ch;
 	flex-shrink: 1.5;
-	// @media (min-width: 800px) {
-	// 	margin: 0 auto;
-	// }
+	
 	@media (hover) {
 		padding-bottom: unset;
-		// margin: 0 0;
 	}
 }

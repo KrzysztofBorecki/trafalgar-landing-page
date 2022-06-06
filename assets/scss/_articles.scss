@@ -76,10 +76,6 @@
 		}
 	}
 	&--section {
-		// max-width: 65ch;
-		// @media (min-width: 481px) {
-		// 	margin: 0 auto;
-		// }
 		flex-shrink: 1;
 
 		@media (hover) {
@@ -91,8 +87,6 @@
 		flex: 1 1 35ch;
 		border-radius: 1.25rem;
 		background: var(--c-text-white);
-		// filter: drop-shadow in this place cause troubles in FF
-		// filter: drop-shadow(10px 40px 50px rgba(229, 233, 246, 0.4));
 		display: flex;
 		flex-flow: row;
 		justify-content: center;
@@ -116,7 +110,6 @@
 	&--testimonials {
 		@media (min-width: 481px) {
 			display: flex;
-			// flex-flow: row wrap;
 			justify-content: center;
 			align-items: center;
 			align-content: start;

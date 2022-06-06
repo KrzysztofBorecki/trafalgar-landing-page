@@ -70,7 +70,7 @@
 	}
 	&::after{ 
 		transform: translateY(-15px)
-	}  
+	}
 
 	&.active {
 		&::before {
@@ -183,8 +183,8 @@
 	color: var(--c-text-menu-active)
 }
 
-// ! in FLEX CONTAINER:
-// ! provide constant width of Nav Link Btn (FLEX ITEM)
+// ! provide constant width of Nav Link Btn (FLEX ITEM) in page layot
+// ! dimensions of Nav Link Btn are different in static / hover states
 .navbar-navigation__link::before {
 	overflow: hidden;
 	visibility: hidden;

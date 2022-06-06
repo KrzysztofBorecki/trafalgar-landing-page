@@ -27,17 +27,10 @@
 	}
 
 	&--center {
-		// @media (min-width: 1000px) {
-		// 	display: flex;
-		// 	flex-flow: column;
-		// 	align-items: center;
-		// 	margin-bottom: 20px;
-		// }
 		@media (hover) {
 			display: flex;
 			flex-flow: column;
 			align-items: center;
-			// margin-bottom: 0;
 		}
 	}
 	&--testimonials {
