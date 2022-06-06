@@ -50,7 +50,11 @@
 		// grid-template-columns: repeat(8, 1fr);
 		// @media (hover) {
 		grid-template-columns: 20px repeat(6, 1fr) 20px;
+		row-gap: 20px;
 
+		// @media (min-width: 520px) {
+		// 	row-gap: unset;
+		// }	
 		@media (min-width: 900px) {
 			grid-template-columns: repeat(8, 1fr);
 		}
