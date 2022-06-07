@@ -1,5 +1,5 @@
 .section-height {
-	@media (hover) {
+	@media (hover) and (pointer: fine) {
 		padding-bottom: 0;
 		min-height: 100vh;
 		padding-top: 100px;
@@ -11,7 +11,7 @@
 	@media (min-width: 1280px) {
 		padding: 0 var(--p-mobile-wide);
 	}
-	@media (hover) {
+	@media (hover) and (pointer: fine) {
 		padding: 0 2rem 3rem 2rem;
 
 		@media (min-width: 1100px) {
@@ -21,20 +21,20 @@
 }
 
 .section-container {
-	@media (hover) {
+	@media (hover) and (pointer: fine) {
 		display: flex;
 		flex-flow: row wrap;
 	}
 
 	&--center {
-		@media (hover) {
+		@media (hover) and (pointer: fine) {
 			display: flex;
 			flex-flow: column;
 			align-items: center;
 		}
 	}
 	&--testimonials {
-		@media (hover) {
+		@media (hover) and (pointer: fine) {
 			display: flex;
 			flex-flow: column;
 			justify-content: center;
@@ -45,7 +45,7 @@
 .section-hero-container {
 	padding-top: 80px;
 
-	@media (hover) {
+	@media (hover) and (pointer: fine) {
 		padding-top: var(--nav-height-desktop-narrow);
 
 		@media (min-width: 660px) {

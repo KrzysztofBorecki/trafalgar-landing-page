@@ -16,7 +16,7 @@
 	transition: all 300ms cubic-bezier(0.3, 0.27, 0.11, 0.97);
 	z-index: 888;
 	
-	@media (hover) {
+	@media (hover) and (pointer: fine) {
 		margin: 0 0;
 	}
 
@@ -29,7 +29,7 @@
 		background-color: var(--c-bg-btn-main);
 		color: var(--c-text-white);
 
-		@media (hover) {
+		@media (hover) and (pointer: fine) {
 			margin: 0 0;
 		}
 
@@ -139,7 +139,7 @@
 		margin-top: 1rem;
 		margin-bottom: -2px;
 
-		@media (hover) {
+		@media (hover) and (pointer: fine) {
 			margin-top: 1.5625rem;
 		}
 	}
@@ -151,7 +151,7 @@
 		margin-left: auto;
 		margin-right: auto;
 
-		@media (hover) {
+		@media (hover) and (pointer: fine) {
 			margin-left: unset;
 			margin-right: auto;
 		}

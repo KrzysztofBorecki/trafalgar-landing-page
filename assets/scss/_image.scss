@@ -7,7 +7,7 @@
 	padding-bottom: 2ch;
 	flex-shrink: 1.5;
 	
-	@media (hover) {
+	@media (hover) and (pointer: fine) {
 		padding-bottom: unset;
 	}
 }

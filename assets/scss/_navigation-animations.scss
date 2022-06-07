@@ -1,7 +1,7 @@
 .noscroll {
 	overflow: hidden;
 
-	@media (hover) {
+	@media (hover) and (pointer: fine) {
 		overflow: unset;
 	} 
 }
@@ -26,7 +26,7 @@
 	transform: translateY(0%);
 }
 
-@media (hover) {
+@media (hover) and (pointer: fine) {
 	.navbar-navigation {
 		transition: unset;
 		transform: unset;

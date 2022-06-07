@@ -11,7 +11,7 @@
 	height: var(--nav-height-mobile);
 	display: block;
 
-	@media (hover) {
+	@media (hover) and (pointer: fine) {
 		height: 100%;
 
 		@media (min-width: 660px) {		
@@ -32,7 +32,7 @@
 	justify-content:space-between;
 	align-items: center;
 
-	@media (hover) {
+	@media (hover) and (pointer: fine) {
 		display: flex;
 		height: var(--nav-height-desktop);
 		background-color: unset;
@@ -96,7 +96,7 @@
 		background: var(--c-text-menu-active);
 	}
 
-	@media (hover) {
+	@media (hover) and (pointer: fine) {
 		display: none;
 	}
 }
@@ -106,7 +106,7 @@
 	padding-top: 20px;
 	background: var(--c-bg-menu); 
 	
-	@media (hover) {
+	@media (hover) and (pointer: fine) {
 		height: unset;
 		padding-top: unset;
 	}
@@ -115,7 +115,7 @@
 .navbar-navigation__menu {
 	display: block;
 	
-	@media (hover) {
+	@media (hover) and (pointer: fine) {
 		min-width: 390px;	
 		display: flex;
 		justify-content: space-between;
@@ -138,7 +138,7 @@
 		background: var(--c-text-menu-static);
 	}
 
-	@media (hover) {
+	@media (hover) and (pointer: fine) {
 		display: inline-block;
 		font-size: 0;
 
@@ -158,7 +158,7 @@
 	font-weight: var(--f-weight-normal);
 	color: var(--c-text-menu-static);
 
-	@media (hover) {
+	@media (hover) and (pointer: fine) {
 		padding: 1rem 0.25rem; 
 		font-size: var(--f-size-main);
 		margin-top: 0em;

@@ -8,7 +8,7 @@
 	@media (min-width: 481px) {
 		padding: var(--p-mobile-narrow) var(--p-mobile-wide);
 	}
-	@media (hover) {
+	@media (hover) and (pointer: fine) {
 		padding: 6.8125rem 0;
 		text-align: unset;
 	}
@@ -17,7 +17,7 @@
 .footer-info__container {
 	margin: 0 0 20px 0;
 
-	@media (hover) {
+	@media (hover) and (pointer: fine) {
 		margin: 0 auto;
 
 		@media (min-width: 1170px) {
@@ -31,7 +31,7 @@
 		max-width: 35ch;
 		margin: 0 0 20px 0;
 
-		@media (hover) {
+		@media (hover) and (pointer: fine) {
 			max-width: 60ch;
 			margin: 0 0 29px 0;
 
@@ -41,7 +41,7 @@
 		}
 	}
 	&__rights {
-		@media (hover) {
+		@media (hover) and (pointer: fine) {
 			margin: 0 0;
 		}
 	}

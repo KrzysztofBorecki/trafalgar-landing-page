@@ -1,4 +1,4 @@
-@media (hover) {
+@media (hover) and (pointer: fine) {
 	.header-grid {
 		display: grid;
 		grid-template-columns: 20px repeat(6, 1fr) 20px;
