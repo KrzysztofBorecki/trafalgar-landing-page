@@ -15,7 +15,7 @@
 	background-color: var(--c-bg-main);
 	text-align: center;
 
-	@media (hover) {
+	@media (hover) and (pointer: fine) {
 		text-align: initial;
 	}
 }
@@ -23,7 +23,7 @@
 .mobile-padding {
 	padding: 0 var(--p-mobile-narrow);
 
-	@media (hover) {
+	@media (hover) and (pointer: fine) {
 		padding: 0 0;
 	}
 }

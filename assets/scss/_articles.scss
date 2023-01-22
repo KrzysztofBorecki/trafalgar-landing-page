@@ -6,7 +6,7 @@
 		width: 100%;
 		gap: 20px;
 	} 
-	@media (hover) {
+	@media (hover) and (pointer: fine) {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -32,7 +32,7 @@
 			justify-content: space-between;
 			gap: 1.875rem;
 		}
-		@media (hover) {
+		@media (hover) and (pointer: fine) {
 			display: flex;
 			flex-flow: row wrap;
 			justify-content: space-between;
@@ -49,7 +49,7 @@
 		@media (min-width: 1280px) {
 			justify-content: space-between;
 		}
-		@media (hover) {
+		@media (hover) and (pointer: fine) {
 			display: flex;
 			flex-flow: row wrap;
 			justify-content: center;
@@ -68,7 +68,7 @@
 	&--hero {
 		flex-shrink: 1;
 
-		@media (hover) {
+		@media (hover) and (pointer: fine) {
 			max-width: 65ch;
 			display: flex;
 			flex-direction: column;
@@ -78,7 +78,7 @@
 	&--section {
 		flex-shrink: 1;
 
-		@media (hover) {
+		@media (hover) and (pointer: fine) {
 			margin: 0 0;
 		}
 	}
@@ -97,7 +97,7 @@
 		@media (min-width: 800px) {
 			margin-bottom: 0;
 		}
-		@media (hover) {
+		@media (hover) and (pointer: fine) {
 			flex: 1 1 26ch;
 			flex-flow: column;
 			margin-bottom: 0;
@@ -115,7 +115,7 @@
 			align-content: start;
 			gap: 1.875rem;
 		}	
-		@media (hover) {
+		@media (hover) and (pointer: fine) {
 			display: flex;
 			flex-flow: row wrap;
 			justify-content: center;
@@ -144,7 +144,7 @@
 			align-items: flex-start;
 			margin-top: unset;
 		}
-		@media (hover) {
+		@media (hover) and (pointer: fine) {
 			display: flex;
 			flex-flow: column;
 			justify-content: space-between;
@@ -160,7 +160,7 @@
 		width: 100%;
 		flex: 1 1 50%;
 
-		@media (hover) {
+		@media (hover) and (pointer: fine) {
 			height: 95px;
 			flex: 0 1 auto;
 			display: flex;
@@ -188,7 +188,7 @@
 				gap: 10px;
 			}
 		}
-		@media (hover) {
+		@media (hover) and (pointer: fine) {
 			padding: 2.0625rem;
 		
 			&--articles{

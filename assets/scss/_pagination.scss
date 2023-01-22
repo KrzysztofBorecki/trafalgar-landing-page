@@ -2,7 +2,7 @@
 	// ! pagination-container with explicit 'display: block' for sefety reasons
 	display: block;
 	
-	@media (hover) {
+	@media (hover) and (pointer: fine) {
 		margin-top: 42px;
 	}
 }
@@ -15,7 +15,7 @@
 	align-items: center;
 	justify-content: space-between;
 
-	@media (hover) {
+	@media (hover) and (pointer: fine) {
 		width: 340px;
 	}
 }

@@ -1,5 +1,5 @@
 .footer-navigation__menu {
-	@media (hover) {
+	@media (hover) and (pointer: fine) {
 		display: flex;
 		justify-content: space-evenly;
 		flex-flow: row;
@@ -15,7 +15,7 @@
 	padding: 0.625rem 0 0.625rem 2rem;
 	transition: all 200ms cubic-bezier(.3,.27,.11,.97);
 
-	@media (hover) {
+	@media (hover) and (pointer: fine) {
 		display: inline-block;
 		min-width: 7.8em;
 		padding: 0 0;
@@ -63,7 +63,7 @@
 		}
 	}
 
-	@media (hover) {
+	@media (hover) and (pointer: fine) {
 		cursor: default;
 		padding: 0.51em 0;
 		margin-top: 0;
@@ -81,7 +81,7 @@
 	transition: max-height 500ms cubic-bezier(.3,.27,.11,.97);
 	margin-bottom:10px;
 
-	@media (hover) {
+	@media (hover) and (pointer: fine) {
 		max-height: unset;
 		overflow: unset;
 		transition: unset;
