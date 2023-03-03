@@ -1,0 +1,12 @@
+{
+  "name": "trafalgar-landing-page",
+  "version": "1.0.0",
+  "homepage": "https://k3orecki.github.io/trafalgar-landing-page/",
+  "description": "This landing page was created based on a [Trafalgar Landing Page](https://www.figma.com/community/file/892358789568947362) UI project designed by [Hero Ninja](https://www.figma.com/@heroninja).",
+  "scripts": {
+    "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
+  }
+}
